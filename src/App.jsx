@@ -262,20 +262,6 @@ function App() {
 
         {/* Floating Security Terminal */}
         <div className="floating-cta">
-          <AnimatePresence>
-            {showBackToTop && (
-              <motion.button
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                onClick={scrollToTop}
-                className="cta-button bg-bg-offset border border-border text-primary shadow-lg hover:shadow-xl"
-                aria-label="Back to Top"
-              >
-                <ArrowUp size={24} />
-              </motion.button>
-            )}
-          </AnimatePresence>
           <div className="cta-label">Direct Priority Line</div>
           <a href="tel:0861102203" className="cta-button shadow-primary/20 hover:shadow-primary/40 border-none">
             <Phone size={28} strokeWidth={2.5} />

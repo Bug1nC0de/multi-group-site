@@ -18,7 +18,13 @@ const PageHero = ({
   }, []);
 
   return (
-    <section className="hero" style={{ backgroundImage: `url(${image})` }}>
+    <section
+      className="hero"
+      style={{
+        backgroundColor: 'var(--section-bg)',
+        backgroundImage: `url(${image})`
+      }}
+    >
       <div className="hero-overlay"></div>
       
       <div className="container hero-container relative z-10 pb-40 md:pb-20">
@@ -34,22 +40,22 @@ const PageHero = ({
 
             {/* System Status Bar */}
             <div className="flex items-center justify-center md:justify-start gap-6 mb-10">
-              <div className="hero-badge">
-                <ShieldCheck size={16} className="text-primary" strokeWidth={1.5} />
+              <div className="hero-badge" style={{background: 'rgba(0,0,0,0.4)', borderColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF'}}>
+                <ShieldCheck size={16} style={{color: '#FFFFFF'}} strokeWidth={1.5} />
                 {badge}
               </div>
-              <div className="hidden sm:flex items-center gap-3 text-[10px] font-black text-vivid tracking-[0.4em] border-l border-border pl-6">
-                <Clock size={14} className="text-primary" strokeWidth={1.5} />
+              <div className="hidden sm:flex items-center gap-3 text-[10px] font-black tracking-[0.4em] pl-6" style={{color: '#FFFFFF', borderLeft: '1px solid rgba(255,255,255,0.3)'}}>
+                <Clock size={14} style={{color: '#FFFFFF'}} strokeWidth={1.5} />
                 {time.toLocaleTimeString([], { hour12: false })} UTC
               </div>
             </div>
 
-            <span className="section-subtitle lg:mx-0">{subtitle}</span>
-            <h1 className="hero-title mt-4">
+            <span className="section-subtitle lg:mx-0" style={{color: '#FFFFFF'}}>{subtitle}</span>
+            <h1 className="hero-title mt-4" style={{color: '#FFFFFF'}}>
               {title}
             </h1>
-            
-            <p className="hero-description font-bold mx-auto md:mx-0 text-white/90">
+
+            <p className="hero-description font-bold mx-auto md:mx-0" style={{color: 'rgba(255,255,255,0.9)'}}>
               {description}
             </p>
           </motion.div>

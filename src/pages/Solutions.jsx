@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Shield, Cpu, Zap, Sun, Train, Snowflake, HardHat, Tractor, Monitor, ArrowRight, ShieldCheck } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LuxCard from '../components/LuxCard';
+import SectionIntroBlock from '../components/SectionIntroBlock';
 
 const Solutions = () => {
   const sectors = [
@@ -24,28 +25,20 @@ const Solutions = () => {
         <Breadcrumbs />
       </div>
 
+      <SectionIntroBlock
+        badge="Unified Excellence"
+        badgeIcon={<ShieldCheck size={16} className="text-primary" />}
+        title={<>Integrated <br /><span>Industrial Solutions</span></>}
+        description="Multi Group Inc operates at the intersection of innovation and infrastructure. Explore our diverse range of tailored services across nine strategic sectors."
+        stats={[
+          { label: 'Strategic Sectors', value: '10' },
+          { label: 'Regional Focus', value: 'SADC' },
+          { label: 'Delivery Model', value: 'Integrated' }
+        ]}
+      />
+
       <section className="section-padding bg-bg relative overflow-hidden">
-        {/* Decorative background element */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
-
         <div className="container relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto mb-20"
-          >
-            <div className="hero-badge mb-6">
-              <ShieldCheck size={16} className="text-primary" />
-              Unified Excellence
-            </div>
-            <h1 className="section-title text-4xl md:text-6xl mb-8">Integrated <br /><span>Industrial Solutions</span></h1>
-            <p className="text-xl text-text-muted font-medium leading-relaxed">
-              Multi Group Inc operates at the intersection of innovation and infrastructure. 
-              Explore our diverse range of tailored services across nine strategic sectors.
-            </p>
-          </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sectors.map((sector, index) => (
               <LuxCard key={index} index={index}>

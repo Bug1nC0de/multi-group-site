@@ -9,7 +9,7 @@ const RefrigerationSolutions = () => {
       subtitle="Cold Chain Management"
       description="Advanced cooling and climate control solutions for food processing, pharmaceuticals, and cold storage logistics."
       icon={Snowflake}
-      image="/assets/fridge-hero.jpg" // Placeholder
+      image="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&q=80&w=2000"
       features={[
         { title: "Cold Storage Facilities", desc: "Design and installation of large-scale freezer and chiller rooms with precise temperature control." },
         { title: "Commercial HVAC", desc: "Energy-efficient heating, ventilation, and air conditioning for industrial complexes." },

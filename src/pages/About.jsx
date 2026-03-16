@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="bg-bg min-h-screen">
       <PageHero 
-        title={<>Since <br /><span className="text-primary">1985</span></>}
+        title={<>Since <br /><span>1985</span></>}
         subtitle="Industrial Heritage"
         description="Multi Group Inc has pioneered the integration of physical infrastructure and industrial intelligence for over four decades."
         badge="40 Years of Excellence"

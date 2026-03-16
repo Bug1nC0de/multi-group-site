@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Cpu, ShieldCheck, Lightbulb, Workflow, Fingerprint, Network, ArrowRight, Activity, Zap, Check, Microscope, Rocket, Globe, Settings, Database } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LuxCard from '../components/LuxCard';
+import SectionIntroBlock from '../components/SectionIntroBlock';
 
 const Innovation = () => {
   const innovationFocus = [
@@ -42,52 +43,17 @@ const Innovation = () => {
         <Breadcrumbs />
       </div>
 
-      {/* Hero Section */}
-      <section className="section-padding bg-bg relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 blur-[100px] rounded-full pointer-events-none"></div>
-        
-        <div className="container relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:w-3/5"
-            >
-              <div className="hero-badge mb-6">
-                <Lightbulb size={16} className="text-primary" strokeWidth={1.5} />
-                Future Focused
-              </div>
-              <h1 className="section-title text-5xl md:text-8xl mb-8 leading-none">
-                Pioneering <span className="text-primary">Next-Gen</span> <br />Industrial Tech
-              </h1>
-              <p className="text-xl text-text-muted font-medium leading-relaxed max-w-2xl">
-                Multi Group Inc is committed to advancing the frontier of industrial security through 
-                relentless R&D and the adoption of emerging technologies.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-              className="lg:w-2/5 relative"
-            >
-              <div className="relative w-full aspect-square max-w-[400px] mx-auto">
-                <div className="absolute inset-0 bg-primary/10 rounded-full animate-pulse"></div>
-                <div className="absolute inset-4 border border-primary/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
-                <div className="absolute inset-8 border border-primary/10 rounded-full animate-[spin_15s_linear_reverse_infinite]"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-bg border border-border rounded-2xl flex items-center justify-center text-primary shadow-2xl relative z-10">
-                    <Rocket size={64} strokeWidth={1} />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <SectionIntroBlock
+        badge="Future Focused"
+        badgeIcon={<Lightbulb size={16} className="text-primary" strokeWidth={1.5} />}
+        title={<>Pioneering <span className="text-primary">Next-Gen</span> <br />Industrial Tech</>}
+        description="Multi Group Inc is committed to advancing the frontier of industrial security through relentless R&D and the adoption of emerging technologies."
+        stats={[
+          { label: 'R&D Verticals', value: '04' },
+          { label: 'Core Domains', value: 'IT + HV' },
+          { label: 'Design Mode', value: 'Future' }
+        ]}
+      />
 
       {/* Innovation Philosophy */}
       <section className="py-24 bg-bg-offset border-y border-border">

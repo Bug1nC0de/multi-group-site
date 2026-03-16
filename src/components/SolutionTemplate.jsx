@@ -12,6 +12,19 @@ const SolutionTemplate = ({
   benefits, 
   image 
 }) => {
+  const solutionLinks = [
+    { label: 'Security', path: '/solutions/security' },
+    { label: 'IT', path: '/solutions/it' },
+    { label: 'Electrical', path: '/solutions/electrical' },
+    { label: 'Solar', path: '/solutions/solar' },
+    { label: 'Rail', path: '/solutions/rail' },
+    { label: 'Refrigeration', path: '/solutions/refrigeration' },
+    { label: 'Construction', path: '/solutions/construction' },
+    { label: 'Agriculture', path: '/solutions/agriculture' },
+    { label: 'AV', path: '/solutions/av' },
+    { label: 'Energy', path: '/solutions/energy' }
+  ];
+
   return (
     <div className="bg-bg min-h-screen">
       <PageHero 
@@ -105,13 +118,13 @@ const SolutionTemplate = ({
               <div className="mt-12 p-8 border border-border bg-bg-offset/50 backdrop-blur-sm">
                 <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-text-muted mb-8">Other Strategic Sectors</h4>
                 <div className="grid grid-cols-2 gap-3">
-                  {['Security', 'IT', 'Energy', 'Rail', 'Construction'].map((sector) => (
+                  {solutionLinks.map((sector) => (
                     <Link 
-                      key={sector}
-                      to={`/solutions/${sector.toLowerCase()}`} 
+                      key={sector.path}
+                      to={sector.path}
                       className="btn btn-outline py-3 px-4 text-[10px] border-border hover:border-primary hover:bg-primary hover:text-white transition-all duration-300"
                     >
-                      {sector}
+                      {sector.label}
                     </Link>
                   ))}
                   <Link to="/solutions" className="btn btn-primary py-3 px-4 text-[10px] shadow-lg">

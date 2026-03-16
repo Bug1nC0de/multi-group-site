@@ -91,13 +91,13 @@ const Home = () => {
       </section>
 
       {/* 5. Final Strategic CTA */}
-      <section className="pt-24 pb-64 bg-bg border-t border-border">
+      <section className="pt-16 pb-32 bg-bg border-t border-border">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto space-y-12"
+            className="max-w-3xl mx-auto space-y-8"
           >
             <div className="flex flex-col items-center gap-4">
               <span className="text-primary font-black text-[10px] uppercase tracking-[0.6em]">Regional Distribution</span>
@@ -106,7 +106,7 @@ const Home = () => {
               </h2>
             </div>
             
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-10">
               <Link to="/contact" className="btn btn-primary px-12 py-5 shadow-2xl">
                 Contact Expert <ChevronRight size={18} />
               </Link>

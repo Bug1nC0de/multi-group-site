@@ -1,7 +1,8 @@
-import { Shield, Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
+import { Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import WordmarkLogo from './WordmarkLogo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,15 +45,7 @@ const Navbar = () => {
       <nav className={`nav ${isScrolled ? 'nav-scrolled' : ''}`}>
         <div className="container nav-container">
           {/* Logo Section */}
-          <Link to="/" className="flex items-center gap-2 no-underline">
-            <div className="bg-primary p-1.5 rounded-none shadow-lg shadow-primary/20">
-              <Shield className="text-white" size={28} strokeWidth={1.5} />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-black text-xl tracking-tight text-white leading-none">Multi Group Inc</span>
-              <span className="text-[9px] tracking-[0.4em] text-primary font-black uppercase mt-0.5">Global Excellence</span>
-            </div>
-          </Link>
+          <WordmarkLogo />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10 h-full">
@@ -86,7 +79,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-6">
             <button 
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-bg-offset border border-border text-text-muted hover:text-primary hover:border-primary transition-all focus:outline-none cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center rounded-full text-text-muted hover:text-primary transition-all focus:outline-none cursor-pointer"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
@@ -118,12 +111,7 @@ const Navbar = () => {
       <div className={`fixed inset-0 bg-dark z-999 flex flex-col pt-10 px-8 transition-all duration-500 lg:hidden overflow-y-auto pb-12 ${isMenuOpen ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible translate-x-full'}`}>
         {/* Mobile Menu Header */}
         <div className="flex justify-between items-center mb-16">
-          <div className="flex items-center gap-2">
-            <div className="bg-primary p-1.5 shadow-lg shadow-primary/20">
-              <Shield className="text-white" size={24} strokeWidth={2.5} />
-            </div>
-            <span className="font-black text-lg text-white uppercase tracking-tighter leading-none">Navigation</span>
-          </div>
+          <WordmarkLogo compact />
           <button 
             onClick={() => setIsMenuOpen(false)}
             className="w-12 h-12 bg-white/5 flex items-center justify-center text-white rounded-none border border-white/10 cursor-pointer"

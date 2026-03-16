@@ -9,7 +9,7 @@ const ElectricalSolutions = () => {
       subtitle="Power & Infrastructure"
       description="Delivering critical high-voltage solutions, substation maintenance, and industrial electrification projects with a focus on safety and reliability."
       icon={Zap}
-      image="/assets/electrical-hero.jpg" // Placeholder
+      image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=2000"
       features={[
         { title: "Substation Construction", desc: "Turnkey design and build of high-voltage substations for municipal and industrial applications." },
         { title: "Transformer Maintenance", desc: "Comprehensive oil analysis, testing, and refurbishment of power transformers." },

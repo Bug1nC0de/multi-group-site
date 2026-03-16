@@ -36,22 +36,22 @@ const Hero = () => {
           >
             {/* System Status Bar */}
             <div className="flex items-center justify-center md:justify-start gap-6 mb-10">
-              <div className="hero-badge">
-                <ShieldCheck size={16} className="text-primary" strokeWidth={1.5} />
+              <div className="hero-badge" style={{background: 'rgba(0,0,0,0.4)', borderColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF'}}>
+                <ShieldCheck size={16} style={{color: '#FFFFFF'}} strokeWidth={1.5} />
                 40 Years of Excellence in SADC Market
               </div>
-              <div className="hidden sm:flex items-center gap-3 text-[10px] font-black text-vivid tracking-[0.4em] border-l border-border pl-6">
-                <Clock size={14} className="text-primary" strokeWidth={1.5} />
+              <div className="hidden sm:flex items-center gap-3 text-[10px] font-black tracking-[0.4em] border-l pl-6" style={{color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.3)'}}>
+                <Clock size={14} style={{color: '#FFFFFF'}} strokeWidth={1.5} />
                 {time.toLocaleTimeString([], { hour12: false })} UTC
               </div>
             </div>
 
             <h1 className="hero-title">
-              Diverse Industries, <br />
+              <span className="text-on-dark">Diverse Industries,</span> <br />
               <span className="text-primary">Unified Excellence</span>
             </h1>
             
-            <p className="hero-description font-bold mx-auto md:mx-0">
+            <p className="hero-description font-bold mx-auto md:mx-0" style={{color: '#FFFFFF'}}>
               Discover how Multi Group Inc serves multiple sectors across Southern Africa with integrated industrial solutions and 40 years of proven expertise.
             </p>
 
@@ -59,7 +59,7 @@ const Hero = () => {
               <Link to="/about" className="btn btn-primary px-10 py-4 shadow-2xl shadow-primary/30">
                 Learn More <ChevronRight size={18} />
               </Link>
-              <Link to="/contact" className="btn btn-outline px-10 py-4 backdrop-blur-md">
+              <Link to="/contact" className="btn btn-outline px-10 py-4 backdrop-blur-md" style={{color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.8)', background: 'rgba(0,0,0,0.3)'}}>
                 Contact Us
               </Link>
             </div>

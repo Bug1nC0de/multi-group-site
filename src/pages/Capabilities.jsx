@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Settings, Truck, Microscope, PenTool, Database, Globe, Zap, ArrowRight, Target, Shield, Briefcase } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LuxCard from '../components/LuxCard';
+import SectionIntroBlock from '../components/SectionIntroBlock';
 
 const Capabilities = () => {
   const coreCapabilities = [
@@ -50,30 +51,17 @@ const Capabilities = () => {
         <Breadcrumbs />
       </div>
 
-      {/* Hero Section */}
-      <section className="section-padding bg-bg relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
-        
-        <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl"
-          >
-            <div className="hero-badge mb-6">
-              <ShieldCheck size={16} className="text-primary" strokeWidth={1.5} />
-              Industrial Prowess
-            </div>
-            <h1 className="section-title text-5xl md:text-7xl mb-8">
-              Core <span className="text-primary">Capabilities</span>
-            </h1>
-            <p className="text-xl text-text-muted font-medium leading-relaxed mb-12 max-w-2xl">
-              Multi Group Inc delivers unified excellence through a sophisticated blend of engineering, 
-              logistics, and strategic manufacturing.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <SectionIntroBlock
+        badge="Industrial Prowess"
+        badgeIcon={<ShieldCheck size={16} className="text-primary" strokeWidth={1.5} />}
+        title={<>Core <span className="text-primary">Capabilities</span></>}
+        description="Multi Group Inc delivers unified excellence through a sophisticated blend of engineering, logistics, and strategic manufacturing."
+        stats={[
+          { label: 'Engineering Pillars', value: '06' },
+          { label: 'Regional Hubs', value: '05' },
+          { label: 'Years Active', value: '40+' }
+        ]}
+      />
 
       {/* Capabilities Grid */}
       <section className="section-padding bg-bg-offset">

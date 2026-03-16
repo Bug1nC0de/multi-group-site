@@ -122,7 +122,7 @@ const ContactSection = () => {
                   </div>
 
                   <div className="pt-10 flex flex-col md:flex-row items-center gap-12">
-                    <button className="w-full md:w-auto bg-primary text-pure-white px-16 py-6 font-black text-[11px] tracking-[0.6em] uppercase hover:bg-primary-dark transition-all flex items-center justify-center gap-6 group rounded-none shadow-[0_0_40px_rgba(37,99,235,0.2)]">
+                    <button className="w-full md:w-auto bg-primary text-on-dark px-16 py-6 font-black text-[11px] tracking-[0.6em] uppercase hover:bg-primary-dark transition-all flex items-center justify-center gap-6 group rounded-none shadow-[0_0_40px_rgba(37,99,235,0.2)]">
                       SEND UPLINK
                       <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                     </button>

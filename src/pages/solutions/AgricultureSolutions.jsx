@@ -9,7 +9,7 @@ const AgricultureSolutions = () => {
       subtitle="Farming & Production"
       description="Innovative solutions for the agricultural sector, ranging from livestock protection to automated feeding systems and nutritional supplements."
       icon={Tractor}
-      image="/assets/agri-hero.jpg" // Placeholder
+      image="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=2000"
       features={[
         { title: "Livestock Protection", desc: "Security tagging, tracking, and perimeter fencing solutions to prevent stock theft." },
         { title: "Nutritional Supplements", desc: "Supply of high-grade feed additives and vitamins for optimal animal health." },

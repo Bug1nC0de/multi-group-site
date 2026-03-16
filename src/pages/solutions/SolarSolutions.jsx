@@ -9,7 +9,7 @@ const SolarSolutions = () => {
       subtitle="Sustainable Power"
       description="Empowering businesses with renewable energy solutions that reduce operational costs and carbon footprint through advanced photovoltaic systems."
       icon={Sun}
-      image="/assets/solar-hero.jpg" // Placeholder
+      image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=2000"
       features={[
         { title: "Commercial PV Installations", desc: "Large-scale rooftop and ground-mounted solar arrays tailored for industrial energy loads." },
         { title: "Battery Storage Systems", desc: "High-capacity lithium-ion storage for peak shaving and backup power continuity." },

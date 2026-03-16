@@ -50,7 +50,7 @@ const Careers = () => {
              <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
              <h2 className="text-3xl font-bold mb-4 text-white tracking-tight">No Active Openings?</h2>
              <p className="text-gray-400 mb-10 text-lg font-medium max-w-2xl mx-auto leading-relaxed">We are always interested in meeting exceptional talent. Send your CV and portfolio to our HR department for future opportunities.</p>
-             <a href="mailto:careers@multi-locking.co.za" className="text-primary font-black tracking-[0.3em] uppercase border-b-2 border-primary pb-2 hover:text-white hover:border-white transition-all text-sm">careers@multi-locking.co.za</a>
+             <a href="mailto:careers@multi-locking.co.za" className="text-primary font-black tracking-[0.3em] uppercase border-b-2 border-primary pb-2 hover:text-text-main hover:border-primary transition-all text-sm">careers@multi-locking.co.za</a>
           </motion.div>
         </div>
       </section>

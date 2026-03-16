@@ -66,7 +66,7 @@ const Search = () => {
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            className="absolute right-0 mt-4 w-[320px] md:w-[400px] bg-[#0A0D14] border border-white/10 shadow-3xl z-[10000] overflow-hidden"
+            className="absolute right-0 mt-4 w-[320px] md:w-[400px] bg-surface border border-border shadow-3xl z-[10000] overflow-hidden"
           >
             <div className="p-4 border-b border-white/5 flex items-center gap-3">
               <SearchIcon size={18} className="text-primary" />

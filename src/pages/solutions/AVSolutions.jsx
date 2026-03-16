@@ -9,7 +9,7 @@ const AVSolutions = () => {
       subtitle="Communication & Display"
       description="State-of-the-art AV solutions for boardrooms, command centers, and public spaces, enhancing communication and visual engagement."
       icon={Monitor}
-      image="/assets/av-hero.jpg" // Placeholder
+      image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2000"
       features={[
         { title: "Video Conferencing", desc: "Seamless unified communications systems for hybrid work environments." },
         { title: "Digital Signage", desc: "Dynamic display networks for corporate branding, wayfinding, and information distribution." },
