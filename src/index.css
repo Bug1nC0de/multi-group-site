@@ -361,7 +361,7 @@ p:last-child {
   width: 100%;
   z-index: 1000;
   height: var(--header-height);
-  background: var(--nav-bg);
+  background: #FFFFFF;
   backdrop-filter: blur(16px);
   display: flex;
   align-items: center;
@@ -371,7 +371,7 @@ p:last-child {
 
 .nav-scrolled {
   height: 75px;
-  background: var(--bg-light);
+  background: #FFFFFF;
   box-shadow: var(--shadow-md);
 }
 
@@ -385,7 +385,7 @@ p:last-child {
 .nav-link {
   font-size: 0.85rem;
   font-weight: 800;
-  color: var(--nav-text);
+  color: var(--text-main);
   text-decoration: none !important; /* Force no underlines */
   transition: var(--transition);
   padding: 0.6rem 0;

@@ -45,7 +45,7 @@ const Navbar = () => {
       <nav className={`nav ${isScrolled ? 'nav-scrolled' : ''}`}>
         <div className="container nav-container">
           {/* Logo Section */}
-          <WordmarkLogo />
+          <WordmarkLogo boxed={false} />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10 h-full">
@@ -91,13 +91,13 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center gap-4 relative">
             <button 
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white focus:outline-none cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-bg-offset border border-border text-text-main focus:outline-none cursor-pointer"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <button 
-              className="text-white border-none bg-transparent cursor-pointer" 
+              className="text-text-main border-none bg-transparent cursor-pointer" 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >

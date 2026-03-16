@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const WordmarkLogo = ({ to = '/', compact = false }) => {
+const WordmarkLogo = ({ to = '/', compact = false, boxed = true }) => {
   return (
     <Link
       to={to}
@@ -8,9 +8,9 @@ const WordmarkLogo = ({ to = '/', compact = false }) => {
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        backgroundColor: '#FFFFFF',
-        padding: compact ? '0.55rem 0.8rem' : '0.7rem 1rem',
-        boxShadow: '0 12px 30px rgba(15, 23, 42, 0.12)'
+        backgroundColor: boxed ? '#FFFFFF' : 'transparent',
+        padding: boxed ? (compact ? '0.55rem 0.8rem' : '0.7rem 1rem') : '0',
+        boxShadow: boxed ? '0 12px 30px rgba(15, 23, 42, 0.12)' : 'none'
       }}
     >
       <span
@@ -33,7 +33,8 @@ const WordmarkLogo = ({ to = '/', compact = false }) => {
           lineHeight: 1,
           letterSpacing: '-0.04em',
           textTransform: 'uppercase',
-          marginLeft: '0.35rem'
+          marginLeft: '0.35rem',
+          whiteSpace: 'nowrap'
         }}
       >
         Group Inc
