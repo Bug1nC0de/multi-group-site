@@ -50,7 +50,7 @@ const LuxCard = ({ children, index = 0, className = "", to, ...props }) => {
   const content = (
     <div 
       style={{ transform: "translateZ(50px)", transformStyle: "preserve-3d" }}
-      className="h-full w-full"
+      className="h-full w-full flex flex-col"
     >
       {children}
     </div>
