@@ -44,7 +44,7 @@ const strengths = [
 
 const KeyStrengths = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-bg">
+    <section className="section-padding pb-0 relative overflow-hidden bg-bg">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
 

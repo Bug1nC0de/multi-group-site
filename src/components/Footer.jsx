@@ -3,15 +3,20 @@ import { Link } from 'react-router-dom';
 import WordmarkLogo from './WordmarkLogo';
 
 const Footer = () => {
+  const blueColor = '#2563EB';
+  const blueMuted = 'rgba(37, 99, 235, 0.8)';
+  const blueLight = 'rgba(37, 99, 235, 0.1)';
+  const blueBorder = 'rgba(37, 99, 235, 0.2)';
+
   return (
-    <footer className="border-t border-border pt-32 pb-12 relative z-10 overflow-hidden hero-pattern" style={{backgroundColor: '#2563EB', color: '#FFFFFF'}}>
+    <footer className="border-t border-border pt-12 pb-12 relative z-10 overflow-hidden hero-pattern bg-bg-offset">
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 mt-32">
 
           {/* Brand Column */}
           <div className="space-y-10">
-            <WordmarkLogo />
-            <p className="text-base leading-relaxed max-w-xs font-medium" style={{color: 'rgba(255,255,255,0.8)'}}>
+            <WordmarkLogo logoHeight="96px" boxed={false} />
+            <p className="text-base leading-relaxed max-w-xs font-medium" style={{color: blueMuted}}>
               Pioneering integrated industrial infrastructure and advanced technological solutions since 1985. We secure what matters most.
             </p>
             <div className="flex gap-4">
@@ -24,7 +29,7 @@ const Footer = () => {
                   key={i}
                   href="#"
                   className="w-10 h-10 rounded-full flex items-center justify-center transition-all"
-                  style={{backgroundColor: 'rgba(255,255,255,0.15)', color: '#FFFFFF', border: '1px solid rgba(255,255,255,0.2)'}}
+                  style={{backgroundColor: blueLight, color: blueColor, border: `1px solid ${blueBorder}`}}
                   aria-label={label}
                 >
                   <Icon size={18} strokeWidth={1.5} />
@@ -35,7 +40,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="lg:pl-8">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10" style={{color: 'rgba(255,255,255,0.6)'}}>Solutions</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10 pt-20" style={{color: blueMuted}}>Solutions</h4>
             <ul className="space-y-5">
               {[
                 { label: "Security & Access", path: "/solutions/security" },
@@ -46,8 +51,8 @@ const Footer = () => {
                 { label: "Agriculture", path: "/solutions/agriculture" }
               ].map((item, i) => (
                 <li key={i}>
-                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: '#FFFFFF'}}>
-                    <div className="w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: '#FFFFFF'}}></div>
+                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
+                    <div className="w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: blueColor}}></div>
                     {item.label}
                   </Link>
                 </li>
@@ -57,7 +62,7 @@ const Footer = () => {
 
           {/* Company */}
           <div className="lg:pl-8">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10" style={{color: 'rgba(255,255,255,0.6)'}}>Company</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10 pt-20" style={{color: blueMuted}}>Company</h4>
             <ul className="space-y-5">
               {[
                 { label: "About Us", path: "/about" },
@@ -67,8 +72,8 @@ const Footer = () => {
                 { label: "Contact", path: "/contact" }
               ].map((item, i) => (
                 <li key={i}>
-                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: '#FFFFFF'}}>
-                    <div className="w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: '#FFFFFF'}}></div>
+                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
+                    <div className="w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: blueColor}}></div>
                     {item.label}
                   </Link>
                 </li>
@@ -78,22 +83,22 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="lg:pl-8">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10" style={{color: 'rgba(255,255,255,0.6)'}}>Contact</h4>
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10 pt-20" style={{color: blueMuted}}>Contact</h4>
             <div className="space-y-8">
               <div className="flex gap-5 items-start">
-                <MapPin size={20} strokeWidth={1.5} color="#FFFFFF" className="shrink-0 mt-1" />
-                <span className="text-sm font-bold leading-relaxed" style={{color: '#FFFFFF'}}>
+                <MapPin size={20} strokeWidth={1.5} color={blueColor} className="shrink-0 mt-1" />
+                <span className="text-sm font-bold leading-relaxed" style={{color: blueColor}}>
                   50 Pierneef Road, Witkoppen Ext., <br />
                   Fourways, Sandton, South Africa
                 </span>
               </div>
               <div className="flex gap-5 items-center">
-                <Phone size={20} strokeWidth={1.5} color="#FFFFFF" className="shrink-0" />
-                <a href="tel:0861102203" className="text-sm font-bold no-underline transition-opacity hover:opacity-70" style={{color: '#FFFFFF'}}>0861 102 203</a>
+                <Phone size={20} strokeWidth={1.5} color={blueColor} className="shrink-0" />
+                <a href="tel:0861102203" className="text-sm font-bold no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>0861 102 203</a>
               </div>
               <div className="flex gap-5 items-center">
-                <Mail size={20} strokeWidth={1.5} color="#FFFFFF" className="shrink-0" />
-                <a href="mailto:admin@multigroupinc.com" className="text-sm font-bold no-underline transition-opacity hover:opacity-70" style={{color: '#FFFFFF'}}>admin@multigroupinc.com</a>
+                <Mail size={20} strokeWidth={1.5} color={blueColor} className="shrink-0" />
+                <a href="mailto:admin@multigroupinc.com" className="text-sm font-bold no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>admin@multigroupinc.com</a>
               </div>
             </div>
           </div>
@@ -101,13 +106,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-black uppercase tracking-[0.3em]" style={{borderTop: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.92)'}}>
-          <p style={{color: 'rgba(255,255,255,0.92)'}}>© 2026 Multi Group Inc. All Rights Reserved.</p>
+        <div className="pt-20 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-black uppercase tracking-[0.3em]" style={{borderTop: `1px solid ${blueBorder}`, color: blueColor}}>
+          <p>© 2026 Multi Group Inc. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
-            <Link to="/disclaimer" className="no-underline transition-opacity hover:opacity-60" style={{color: '#FFFFFF'}}>Disclaimer</Link>
-            <Link to="/privacy-policy" className="no-underline transition-opacity hover:opacity-60" style={{color: '#FFFFFF'}}>Privacy</Link>
-            <Link to="/terms" className="no-underline transition-opacity hover:opacity-60" style={{color: '#FFFFFF'}}>Terms</Link>
-            <span className="hidden sm:inline pl-10" style={{color: 'rgba(255,255,255,0.92)', borderLeft: '1px solid rgba(255,255,255,0.3)'}}>Level 4 BEE Contributor</span>
+            <Link to="/disclaimer" className="no-underline transition-opacity hover:opacity-60" style={{color: blueColor}}>Disclaimer</Link>
+            <Link to="/privacy-policy" className="no-underline transition-opacity hover:opacity-60" style={{color: blueColor}}>Privacy</Link>
+            <Link to="/terms" className="no-underline transition-opacity hover:opacity-60" style={{color: blueColor}}>Terms</Link>
+            <span className="hidden sm:inline pl-10" style={{color: blueColor, borderLeft: `1px solid ${blueBorder}`}}>Level 4 BEE Contributor</span>
           </div>
         </div>
       </div>

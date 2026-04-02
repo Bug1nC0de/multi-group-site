@@ -2,6 +2,7 @@ import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { ChevronRight, ShieldCheck, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import heroVideo from '../assets/video/hero-bg.mp4';
 
 const Counter = ({ value, suffix = "" }) => {
   const count = useMotionValue(0);
@@ -24,7 +25,18 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero relative overflow-hidden bg-dark">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+
       <div className="hero-overlay"></div>
       
       <div className="container hero-container relative z-10 pb-80 md:pb-40">

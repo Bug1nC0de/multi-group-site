@@ -30,7 +30,7 @@ const SectorOverview = () => {
   ];
 
   return (
-    <section className="section-padding bg-bg relative overflow-hidden">
+    <section className="section-padding pb-0 bg-bg relative overflow-hidden">
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ const SectorOverview = () => {
           ))}
         </div>
         
-        <div className="text-center" style={{ marginTop: '1cm' }}>
+        <div className="text-center" style={{ marginTop: '0.5cm' }}>
           <Link to="/solutions" className="btn btn-primary px-10 py-4 shadow-xl shadow-primary/20">
             View All Capabilities <ArrowRight size={18} />
           </Link>

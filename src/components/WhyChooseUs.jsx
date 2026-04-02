@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-bg-offset border-y border-border">
+    <div className="relative overflow-hidden">
       {/* Background Radial Glow - Matches the screenshot lighting */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.05)_0%,_transparent_70%)] pointer-events-none"></div>
       
@@ -115,7 +115,7 @@ const WhyChooseUs = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

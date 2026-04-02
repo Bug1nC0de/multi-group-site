@@ -29,6 +29,7 @@
   --font-main: 'Plus Jakarta Sans', sans-serif;
   --header-height: 90px;
   --container-max: 1400px;
+  --section-spacing: 1.5cm;
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
@@ -133,12 +134,12 @@ h1, h2, h3, h4, h5, h6 {
 .bg-white { background-color: var(--surface); }
 
 .section-padding {
-  padding: 80px 0;
+  padding: var(--section-spacing) 0;
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 60px 0;
+    padding: calc(var(--section-spacing) * 0.8) 0;
   }
   .container {
     padding: 0 1.5rem;
@@ -361,7 +362,7 @@ p:last-child {
   width: 100%;
   z-index: 1000;
   height: var(--header-height);
-  background: #FFFFFF;
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
   display: flex;
   align-items: center;
@@ -371,7 +372,7 @@ p:last-child {
 
 .nav-scrolled {
   height: 75px;
-  background: #FFFFFF;
+  background: var(--nav-bg);
   box-shadow: var(--shadow-md);
 }
 
@@ -608,7 +609,18 @@ p:last-child {
 
 .rounded-none { border-radius: 0; }
 .rounded-lg { border-radius: 0.5rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+.shadow-sm { box-shadow: var(--shadow-sm); }
 .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-primary\/20 { box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2); }
+.shadow-primary\/40 { box-shadow: 0 20px 40px rgba(37, 99, 235, 0.4); }
+.hover\:shadow-primary\/20:hover { box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2); }
+.hover\:shadow-primary\/40:hover { box-shadow: 0 20px 40px rgba(37, 99, 235, 0.4); }
+.border-none { border: none; }
+.border { border: 1px solid var(--border); }
+.border-border { border: 1px solid var(--border); }
+.border-primary { border: 1px solid var(--primary); }
 
 .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
 .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
@@ -719,10 +731,6 @@ p:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--section-bg);
-  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000');
-  background-size: cover;
-  background-position: center;
   color: var(--heading-color); /* Dynamic color */
   overflow: hidden;
   padding-top: var(--header-height);
@@ -742,8 +750,8 @@ p:last-child {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(2, 4, 8, 0.72) 0%, rgba(2, 4, 8, 0.58) 35%, rgba(2, 4, 8, 0.78) 100%),
-    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.18) 0%, transparent 38%);
+    linear-gradient(180deg, rgba(2, 4, 8, 0.6) 0%, rgba(2, 4, 8, 0.4) 35%, rgba(2, 4, 8, 0.7) 100%),
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.15) 0%, transparent 40%);
   z-index: 1;
 }
 

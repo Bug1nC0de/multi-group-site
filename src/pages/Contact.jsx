@@ -224,16 +224,18 @@ const Contact = () => {
             {[
               { 
                 name: "Lee Ann Pillay", 
-                role: "Regional Manager", 
-                email: "leeann@multigroupinc.com",
-                phone: "+27 (0) XX XXX XXXX",
+                organization: "Multi-Group Incorporated Lda - Moz",
+                emails: ["lee-ann@multigroupinc.com"],
+                phones: ["+258 875988899"],
+                phoneLabels: ["TEL W/A"],
                 icon: <User size={32} />
               },
               { 
                 name: "Peter Trousdale", 
-                role: "Operations Manager", 
-                email: "peter@multigroupinc.com",
-                phone: "+27 (0) XX XXX XXXX",
+                organization: "Multi-Group Incorporated Lda - RSA",
+                emails: ["peter@multigroupinc.com"],
+                phones: ["+27 836501682"],
+                phoneLabels: ["SA TEL"],
                 icon: <Users size={32} />
               }
             ].map((person, i) => (
@@ -243,10 +245,14 @@ const Contact = () => {
                     {person.icon}
                   </div>
                   <h3 className="text-2xl font-black text-text-main tracking-tight">{person.name}</h3>
-                  <p className="text-primary font-bold text-sm uppercase tracking-widest">{person.role}</p>
+                  <p className="text-primary font-bold text-sm uppercase tracking-widest">{person.organization}</p>
                   <div className="pt-4 space-y-2">
-                    <p className="text-text-muted text-sm">{person.email}</p>
-                    <p className="text-text-muted text-sm">{person.phone}</p>
+                    {person.phones.map((phone, idx) => (
+                      <p key={idx} className="text-text-muted text-sm">{person.phoneLabels[idx]}: <a href={`tel:${phone}`} className="text-primary font-semibold no-underline hover:underline">{phone}</a></p>
+                    ))}
+                    {person.emails.map((email, idx) => (
+                      <p key={idx} className="text-text-muted text-sm">EMAIL: <a href={`mailto:${email}`} className="text-primary font-semibold no-underline hover:underline">{email}</a></p>
+                    ))}
                   </div>
                 </div>
               </div>
