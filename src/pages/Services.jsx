@@ -61,9 +61,7 @@ const Services = () => {
     <div className="bg-bg min-h-screen">
       <PageHero 
         title={<>Specialized <br /><span className="text-primary">Operational Services</span></>}
-        subtitle="Professional Excellence"
         description="Providing turn-key analysis and world-class security services through our specialized Siyavikela division. Powered by 40 years of combined industry experience."
-        badge="Strategic Security Unit"
       />
 
       <section className="section-padding bg-bg relative overflow-hidden">
@@ -87,12 +85,12 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ marginTop: '1cm' }}>
             {servicesData.map((service, i) => (
               <LuxCard key={i} index={i} className="group">
                 <div className="card-content p-10 flex flex-col items-start h-full text-left">
                   <div className="w-full flex justify-between items-start mb-10">
-                    <div className="w-16 h-16 bg-bg border border-border flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-lg group-hover:scale-110">
+                    <div className="w-16 h-16 bg-transparent border border-border flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110">
                       {React.cloneElement(service.icon, { strokeWidth: 1.5 })}
                     </div>
                     <span className="text-[10px] text-primary font-black uppercase tracking-[0.4em]">{service.brand}</span>
@@ -180,7 +178,7 @@ const Services = () => {
                       <span className="text-[9px] text-text-muted font-black tracking-[0.4em] uppercase">Accreditation</span>
                       <div className="text-text-main font-black uppercase text-sm">PSIRA Grade A Certified</div>
                     </div>
-                    <div className="w-14 h-14 bg-bg-offset flex items-center justify-center text-primary border border-border">
+                    <div className="w-14 h-14 bg-bg-offset flex items-center justify-center text-primary">
                       <Shield size={28} />
                     </div>
                   </div>

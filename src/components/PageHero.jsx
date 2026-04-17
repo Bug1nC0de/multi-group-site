@@ -8,7 +8,7 @@ const PageHero = ({
   subtitle, 
   description, 
   image = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000',
-  badge = "Global Excellence"
+  badge = null
 }) => {
   const [time, setTime] = useState(new Date());
 
@@ -40,17 +40,19 @@ const PageHero = ({
 
             {/* System Status Bar */}
             <div className="flex items-center justify-center md:justify-start gap-6 mb-10">
-              <div className="hero-badge" style={{background: 'rgba(0,0,0,0.4)', borderColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF'}}>
-                <ShieldCheck size={16} style={{color: '#FFFFFF'}} strokeWidth={1.5} />
-                {badge}
-              </div>
+              {badge && (
+                <div className="hero-badge" style={{background: 'rgba(0,0,0,0.4)', borderColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF'}}>
+                  <ShieldCheck size={16} style={{color: '#FFFFFF'}} strokeWidth={1.5} />
+                  {badge}
+                </div>
+              )}
               <div className="hidden sm:flex items-center gap-3 text-[10px] font-black tracking-[0.4em] pl-6" style={{color: '#FFFFFF', borderLeft: '1px solid rgba(255,255,255,0.3)'}}>
                 <Clock size={14} style={{color: '#FFFFFF'}} strokeWidth={1.5} />
                 {time.toLocaleTimeString([], { hour12: false })} UTC
               </div>
             </div>
 
-            <span className="section-subtitle lg:mx-0" style={{color: '#FFFFFF'}}>{subtitle}</span>
+            {subtitle && <span className="section-subtitle lg:mx-0" style={{color: '#FFFFFF'}}>{subtitle}</span>}
             <h1 className="hero-title mt-4" style={{color: '#FFFFFF'}}>
               {title}
             </h1>

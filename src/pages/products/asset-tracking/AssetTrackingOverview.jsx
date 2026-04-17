@@ -38,7 +38,8 @@ const AssetTrackingOverview = () => {
               >
                 <div className="card-content flex-row justify-between w-full">
                   <div className="flex items-center gap-6">
-                    <div className="w-14 h-14 bg-primary/5 rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 border border-primary/20">
+                    <div className="w-14 h-14 bg-transparent rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+
                       {item.icon}
                     </div>
                     <span className="text-sm font-black uppercase tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors">{item.label}</span>
@@ -79,8 +80,7 @@ const AssetTrackingOverview = () => {
                 className="group"
               >
                 <div className="card-content">
-                  <div className="w-16 h-16 bg-primary/10 rounded-none flex items-center justify-center text-primary mb-8 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    {item.icon}
+                  <div className="w-16 h-16 bg-transparent rounded-none flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500">                    {item.icon}
                   </div>
                   <h3 className="text-2xl font-bold mb-5 text-white tracking-tight">{item.title}</h3>
                   <p className="text-gray-400 text-base leading-relaxed font-medium">{item.desc}</p>

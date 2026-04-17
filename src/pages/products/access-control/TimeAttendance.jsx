@@ -83,7 +83,7 @@ const TimeAttendance = () => {
               
               <div className="space-y-8">
                 <div className="flex gap-6 group">
-                   <div className="w-14 h-14 bg-primary/10 rounded-none flex items-center justify-center text-primary border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all shrink-0">
+                   <div className="w-14 h-14 rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0">
                       <FileSpreadsheet size={28} />
                    </div>
                    <div className="text-left">
@@ -92,7 +92,7 @@ const TimeAttendance = () => {
                    </div>
                 </div>
                 <div className="flex gap-6 group">
-                   <div className="w-14 h-14 bg-primary/10 rounded-none flex items-center justify-center text-primary border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all shrink-0">
+                   <div className="w-14 h-14 rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0">
                       <Clock size={28} />
                    </div>
                    <div className="text-left">

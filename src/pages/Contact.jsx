@@ -14,6 +14,7 @@ import {
   Users
 } from 'lucide-react';
 import LuxCard from '../components/LuxCard';
+import PageHero from '../components/PageHero';
 import { useTheme } from '../context/ThemeContext';
 import Breadcrumbs from '../components/Breadcrumbs';
 import './Contact.css';
@@ -42,10 +43,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page page-wrapper">
-      <div className="container" style={{ paddingTop: '2rem' }}>
-        <Breadcrumbs />
-      </div>
+    <div className="bg-bg min-h-screen">
+      <PageHero 
+        title={<>Establish <br /><span>Contact</span></>}
+        description="Our team of technical architects and consultants are ready to assist you with your industrial infrastructure requirements across Southern Africa."
+        image="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=2000"
+      />
 
       <section className="contact-container">
         <div className="contact-grid">
@@ -210,52 +213,56 @@ const Contact = () => {
       </section>
 
       {/* Contact Information for Key Personnel */}
-      <section className="section-padding bg-bg-offset relative overflow-hidden border-y border-border">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.03)_0%,_transparent_70%)]"></div>
-        <div className="container relative z-10">
+      <section className="section-padding bg-bg">
+        <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black text-text-main mb-4 uppercase tracking-tight">Contact Information for Key Personnel</h2>
-            <p className="text-text-muted max-w-2xl mx-auto font-medium">
-              Reach out to our dedicated team members for assistance.
-            </p>
+            <h2 className="text-4xl font-black text-text-main mb-4 uppercase tracking-tight">Key Personnel</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {[
               { 
                 name: "Lee Ann Pillay", 
                 organization: "Multi-Group Incorporated Lda - Moz",
                 emails: ["lee-ann@multigroupinc.com"],
                 phones: ["+258 875988899"],
-                phoneLabels: ["TEL W/A"],
-                icon: <User size={32} />
+                phoneLabels: ["WhatsApp"]
               },
               { 
                 name: "Peter Trousdale", 
                 organization: "Multi-Group Incorporated Lda - RSA",
                 emails: ["peter@multigroupinc.com"],
                 phones: ["+27 836501682"],
-                phoneLabels: ["SA TEL"],
-                icon: <Users size={32} />
+                phoneLabels: ["Tel"]
               }
             ].map((person, i) => (
-              <div key={i} className="p-1 bg-gradient-to-b from-primary/5 to-transparent border border-border">
-                <div className="bg-bg p-8 text-center space-y-4">
-                  <div className="w-20 h-20 bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mx-auto mb-6 rounded-full">
-                    {person.icon}
-                  </div>
-                  <h3 className="text-2xl font-black text-text-main tracking-tight">{person.name}</h3>
-                  <p className="text-primary font-bold text-sm uppercase tracking-widest">{person.organization}</p>
-                  <div className="pt-4 space-y-2">
-                    {person.phones.map((phone, idx) => (
-                      <p key={idx} className="text-text-muted text-sm">{person.phoneLabels[idx]}: <a href={`tel:${phone}`} className="text-primary font-semibold no-underline hover:underline">{phone}</a></p>
-                    ))}
-                    {person.emails.map((email, idx) => (
-                      <p key={idx} className="text-text-muted text-sm">EMAIL: <a href={`mailto:${email}`} className="text-primary font-semibold no-underline hover:underline">{email}</a></p>
-                    ))}
-                  </div>
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="group relative flex flex-col items-center justify-between border border-border rounded-3xl py-12 px-8 transition-all hover:bg-primary/5 hover:border-primary/50 shadow-sm"
+              >
+                <div className="text-center mb-8">
+                  <h3 className="text-3xl font-black text-text-main tracking-tight mb-2 group-hover:text-primary transition-colors">{person.name}</h3>
+                  <p className="text-primary font-bold text-[10px] uppercase tracking-[0.2em]">{person.organization}</p>
                 </div>
-              </div>
+                
+                <div className="flex flex-col gap-4 items-center text-center">
+                  {person.phones.map((phone, idx) => (
+                    <div key={idx} className="flex flex-col items-center">
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-text-muted mb-1">{person.phoneLabels[idx]}</span>
+                      <a href={`tel:${phone}`} className="text-sm font-bold text-text-main hover:text-primary transition-colors">{phone}</a>
+                    </div>
+                  ))}
+                  {person.emails.map((email, idx) => (
+                    <div key={idx} className="flex flex-col items-center">
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-text-muted mb-1">Email</span>
+                      <a href={`mailto:${email}`} className="text-sm font-bold text-text-main hover:text-primary transition-colors">{email}</a>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -287,7 +294,7 @@ const Contact = () => {
             ].map((item, i) => (
               <LuxCard key={i} index={i} className="group">
                 <div className="card-content">
-                  <div className="w-12 h-12 bg-white flex items-center justify-center text-primary mb-6 shadow-sm border border-border">
+                  <div className="w-12 h-12 bg-transparent flex items-center justify-center text-primary mb-6">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-text-main mb-3">{item.title}</h3>

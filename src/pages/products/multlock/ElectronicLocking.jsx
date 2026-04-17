@@ -87,8 +87,7 @@ const ElectronicLocking = () => {
                 ].map((item, i) => (
                   <LuxCard key={i} index={i} className="group">
                     <div className="card-content flex-row gap-8 text-left">
-                      <div className="w-14 h-14 bg-primary/10 rounded-none flex items-center justify-center text-primary border border-primary/20 shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                        {item.icon}
+                      <div className="w-14 h-14 bg-transparent rounded-none flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-500">                        {item.icon}
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold mb-2 text-white tracking-tight group-hover:text-primary transition-colors">{item.title}</h3>

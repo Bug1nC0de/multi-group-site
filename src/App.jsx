@@ -260,14 +260,6 @@ function App() {
           </PageWrapper>
         </div>
 
-        {/* Floating Security Terminal */}
-        <div className="floating-cta">
-          <div className="cta-label">Direct Priority Line</div>
-          <a href="tel:0861102203" className="cta-button shadow-primary/20 hover:shadow-primary/40 border-none">
-            <Phone size={28} strokeWidth={2.5} />
-          </a>
-        </div>
-
         <Footer />
       </div>
     </Router>

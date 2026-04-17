@@ -79,19 +79,37 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-6">
             <button 
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center rounded-full text-text-muted hover:text-primary transition-all focus:outline-none cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center rounded-full transition-all focus:outline-none cursor-pointer border-none"
+              style={{ 
+                color: theme === 'dark' ? '#FFFFFF' : '#000000',
+                background: 'none',
+                backgroundColor: 'transparent',
+                border: 'none',
+                boxShadow: 'none',
+                outline: 'none',
+                padding: 0
+              }}
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            <Link to="/contact" className="btn btn-primary px-8 py-3 text-[11px] border-none cursor-pointer">Get Quote</Link>
+            <Link to="/contact" className="btn btn-primary px-8 py-3 text-[11px] border-none cursor-pointer">Get In Touch</Link>
           </div>
 
           {/* Mobile Actions */}
           <div className="lg:hidden flex items-center gap-4 relative">
             <button 
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-bg-offset text-text-main focus:outline-none cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center rounded-full focus:outline-none cursor-pointer border-none"
+              style={{ 
+                color: theme === 'dark' ? '#FFFFFF' : '#000000',
+                background: 'none',
+                backgroundColor: 'transparent',
+                border: 'none',
+                boxShadow: 'none',
+                outline: 'none',
+                padding: 0
+              }}
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -114,7 +132,7 @@ const Navbar = () => {
           <WordmarkLogo compact />
           <button 
             onClick={() => setIsMenuOpen(false)}
-            className="w-12 h-12 bg-white/5 flex items-center justify-center text-white rounded-none border border-white/10 cursor-pointer"
+            className="w-12 h-12 flex items-center justify-center text-white rounded-none cursor-pointer"
             aria-label="Close menu"
           >
             <X size={28} />
@@ -145,7 +163,7 @@ const Navbar = () => {
 
           <Link to="/contact" className="text-2xl font-bold text-primary no-underline border-b border-white/5 pb-4">Contact</Link>
           
-          <Link to="/contact" className="btn btn-primary mt-4 justify-center py-4 border-none cursor-pointer">Get a Quote</Link>
+          <Link to="/contact" className="btn btn-primary mt-4 justify-center py-4 border-none cursor-pointer">Get In Touch</Link>
         </div>
       </div>
     </>

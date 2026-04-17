@@ -9,8 +9,7 @@ const SectorOverview = () => {
     { 
       icon: <Shield size={32} strokeWidth={1.5} />, 
       title: "Defense & Technology", 
-      desc: "Integrated security, enterprise IT, and advanced audio-visual systems for complete digital and physical protection.",
-      items: ["Security Industry", "IT Solutions", "Audio Visual"],
+      desc: "Integrated security, enterprise IT, and advanced audio-visual systems for digital and physical protection.",      items: ["Security", "IT Sector", "Audio Visual"],
       color: "text-blue-500"
     },
     { 
@@ -47,11 +46,11 @@ const SectorOverview = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8" style={{ marginTop: '1cm' }}>
           {categories.map((cat, index) => (
             <LuxCard key={index} index={index}>
               <div className="card-content">
-                <div className={`w-16 h-16 ${cat.color} bg-bg-offset border border-border flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform`}>
+                <div className={`w-16 h-16 ${cat.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}>
                   {cat.icon}
                 </div>
                 

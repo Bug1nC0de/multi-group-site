@@ -60,10 +60,9 @@ const KeyStrengths = () => {
           <h2 className="section-title text-4xl md:text-6xl mb-8">
             Strategic <span>Infrastructure</span>
           </h2>
-          <p className="text-xl text-text-muted font-medium leading-relaxed">
+          <p className="text-xl text-text-muted font-medium leading-relaxed" style={{ marginBottom: '1cm' }}>
             Exploring the core capabilities and strengths across the African continent
-          </p>
-        </motion.div>
+          </p>        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {strengths.map((item, i) => (
@@ -73,7 +72,7 @@ const KeyStrengths = () => {
               className="group"
             >
               <div className="card-content p-4">
-                <div className={`mb-8 ${item.color} w-14 h-14 flex items-center justify-center rounded-none bg-primary/5 border border-primary/10 group-hover:bg-primary group-hover:text-white transition-all duration-500`}>
+                <div className={`mb-8 ${item.color} w-14 h-14 flex items-center justify-center rounded-none group-hover:text-white transition-all duration-500`}>
                   {item.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-text-main mb-4 tracking-tight group-hover:text-primary transition-colors">
