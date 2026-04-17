@@ -60,7 +60,7 @@ const Innovations = () => {
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[80px] rounded-none translate-x-1/2 -translate-y-1/2"></div>
               
               <div className="flex justify-center mb-12">
-                <div className="w-24 h-24 bg-primary/10 rounded-none flex items-center justify-center text-primary border border-primary/20 shadow-2xl shadow-primary/5">
+                <div className="w-24 h-24 bg-primary/10 rounded-none flex items-center justify-center text-primary shadow-2xl shadow-primary/5">
                   <Microscope size={56} />
                 </div>
               </div>

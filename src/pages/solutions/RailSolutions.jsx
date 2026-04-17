@@ -1,26 +1,25 @@
 import React from 'react';
-import { Train } from 'lucide-react';
+import { Train, Settings, Shield, Truck, Wrench } from 'lucide-react';
 import SolutionTemplate from '../../components/SolutionTemplate';
 
 const RailSolutions = () => {
   return (
     <SolutionTemplate
-      title="Rail Industry Engineering"
-      subtitle="Transport & Logistics"
-      description="Specialized parts, signaling systems, and maintenance services for the rail sector, ensuring the safe and efficient movement of freight and passengers."
+      title={<>Rail Industry <br /><span>Parts & Logistics</span></>}
+      description="We provide mission-critical locomotive components and signaling infrastructure, ensuring safety and operational efficiency across the rail network."
       icon={Train}
-      image="https://images.unsplash.com/photo-1474487056289-6223889efff6?auto=format&fit=crop&q=80&w=2000"
+      image="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80&w=2000"
       features={[
-        { title: "Locomotive Parts", desc: "Supply of critical engine components, braking systems, and electrical spares for diesel and electric locomotives." },
-        { title: "Signaling & Control", desc: "Modernization of trackside signaling and centralized traffic control systems." },
-        { title: "Track Maintenance", desc: "Equipment and components for permanent way maintenance and rehabilitation." },
-        { title: "Rolling Stock Refurbishment", desc: "Upgrading and extending the lifecycle of wagons and coaches." }
+        { title: "Locomotive Components", desc: "High-precision mechanical parts engineered for heavy-duty transit and reliability.", icon: Settings },
+        { title: "Signaling Systems", desc: "Advanced signaling infrastructure designed to optimize traffic flow and ensure network safety.", icon: Shield },
+        { title: "Specialized Logistics", desc: "End-to-end management for transit hardware and specialized rail logistics support.", icon: Truck },
+        { title: "Rolling Stock Maintenance", desc: "Complete lifecycle support and refurbishment for aging locomotive and wagon fleets.", icon: Wrench }
       ]}
       benefits={[
-        "OEM Quality Standards",
-        "Supply Chain Reliability",
-        "Technical Engineering Support",
-        "Safety Critical Compliance"
+        "High-Durability Engineering",
+        "SABS Compliant Components",
+        "Optimized Transit Safety",
+        "Strategic SADC Supply Chain"
       ]}
     />
   );

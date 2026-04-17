@@ -2,9 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Shield, Cpu, Zap, Sun, Train, Snowflake, HardHat, Tractor, Monitor, ArrowRight, ShieldCheck } from 'lucide-react';
-import Breadcrumbs from '../components/Breadcrumbs';
+import PageHero from '../components/PageHero';
 import LuxCard from '../components/LuxCard';
-import SectionIntroBlock from '../components/SectionIntroBlock';
 
 const Solutions = () => {
   const sectors = [
@@ -20,30 +19,20 @@ const Solutions = () => {
   ];
 
   return (
-    <div className="bg-bg min-h-screen page-wrapper">
-      <div className="container" style={{ paddingTop: '2rem' }}>
-        <Breadcrumbs />
-      </div>
-
-      <SectionIntroBlock
-        badge="Unified Excellence"
-        badgeIcon={<ShieldCheck size={16} className="text-primary" />}
+    <div className="bg-bg min-h-screen">
+      <PageHero 
         title={<>Integrated <br /><span>Industrial Solutions</span></>}
-        description="Multi Group Inc operates at the intersection of innovation and infrastructure. Explore our diverse range of tailored services across nine strategic sectors."
-        stats={[
-          { label: 'Strategic Sectors', value: '10' },
-          { label: 'Regional Focus', value: 'SADC' },
-          { label: 'Delivery Model', value: 'Integrated' }
-        ]}
+        description="Multi Group Inc operates at the intersection of innovation and infrastructure. Explore our diverse range of tailored services across strategic sectors."
+        image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000"
       />
 
       <section className="section-padding bg-bg relative overflow-hidden">
         <div className="container relative z-10 text-center">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ marginTop: '1cm' }}>
             {sectors.map((sector, index) => (
               <LuxCard key={index} index={index}>
-                <div className="card-content h-full flex flex-col">
-                  <div className={`w-16 h-16 ${sector.color} bg-bg-offset border border-border flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform`}>
+                <div className="card-content h-full">
+                  <div className={`w-16 h-16 ${sector.color} bg-transparent flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}>
                     {sector.icon}
                   </div>
                   
@@ -69,20 +58,6 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* Trust Strip */}
-      <section className="py-20 bg-bg-offset border-y border-border overflow-hidden relative">
-         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.05)_0%,_transparent_70%)] pointer-events-none"></div>
-         <div className="container relative z-10">
-            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
-               {['40+ Years', 'SADC Market Leader', 'SABS Certified', 'BEE Level 4'].map((text, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                     <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                     <span className="text-[11px] font-black uppercase tracking-[0.4em] text-text-main">{text}</span>
-                  </div>
-               ))}
-            </div>
-         </div>
-      </section>
     </div>
   );
 };

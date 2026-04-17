@@ -1,46 +1,61 @@
 import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WordmarkLogo from './WordmarkLogo';
+import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 
 const Footer = () => {
-  const blueColor = '#2563EB';
-  const blueMuted = 'rgba(37, 99, 235, 0.8)';
-  const blueLight = 'rgba(37, 99, 235, 0.1)';
-  const blueBorder = 'rgba(37, 99, 235, 0.2)';
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
+  const blueColor = isDark ? '#FFFFFF' : '#2563EB';
+  const blueMuted = isDark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(37, 99, 235, 0.8)';
+  const blueLight = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(37, 99, 235, 0.1)';
+  const blueBorder = isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(37, 99, 235, 0.2)';
+
+  const socialIcons = [
+    { Icon: Facebook, label: "Facebook", color: isDark ? "#FFFFFF" : "#1877F2", hoverBg: "rgba(24, 119, 242, 0.2)" },
+    { Icon: Instagram, label: "Instagram", color: isDark ? "#FFFFFF" : "#E4405F", hoverBg: "rgba(228, 64, 95, 0.2)" },
+    { Icon: Linkedin, label: "LinkedIn", color: isDark ? "#FFFFFF" : "#0A66C2", hoverBg: "rgba(10, 102, 194, 0.2)" }
+  ];
 
   return (
-    <footer className="border-t border-border pt-12 pb-12 relative z-10 overflow-hidden hero-pattern bg-bg-offset">
+    <footer className="pt-0 pb-5 relative z-10 overflow-hidden hero-pattern bg-bg-offset">
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 mt-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24 mt-0">
 
           {/* Brand Column */}
-          <div className="space-y-10">
+          <div className="space-y-10" style={{ paddingTop: '0.4cm' }}>
             <WordmarkLogo logoHeight="96px" boxed={false} />
             <p className="text-base leading-relaxed max-w-xs font-medium" style={{color: blueMuted}}>
               Pioneering integrated industrial infrastructure and advanced technological solutions since 1985. We secure what matters most.
             </p>
-            <div className="flex gap-4">
-              {[
-                { Icon: Facebook, label: "Facebook" },
-                { Icon: Instagram, label: "Instagram" },
-                { Icon: Linkedin, label: "LinkedIn" }
-              ].map(({ Icon, label }, i) => (
-                <a
+            {/* Social Icons - Centered */}
+            <div className="flex justify-center gap-5" style={{ marginBottom: '1cm' }}>
+              {socialIcons.map(({ Icon, label, color, hoverBg }, i) => (
+                <motion.a
                   key={i}
                   href="#"
-                  className="w-10 h-10 rounded-full flex items-center justify-center transition-all"
-                  style={{backgroundColor: blueLight, color: blueColor, border: `1px solid ${blueBorder}`}}
+                  whileHover={{ scale: 1.15, y: -4 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group relative w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300"
+                  style={{
+                    color: color
+                  }}
                   aria-label={label}
                 >
-                  <Icon size={18} strokeWidth={1.5} />
-                </a>
+                  <Icon size={20} strokeWidth={2} />
+                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 text-xs font-black px-2 py-1 rounded bg-text-main text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-50">
+                    {label}
+                  </span>
+                </motion.a>
               ))}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="lg:pl-8">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10 pt-20" style={{color: blueMuted}}>Solutions</h4>
+          <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-10" style={{color: blueMuted}}>Solutions</h4>
             <ul className="space-y-5">
               {[
                 { label: "Security & Access", path: "/solutions/security" },
@@ -61,8 +76,8 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div className="lg:pl-8">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10 pt-20" style={{color: blueMuted}}>Company</h4>
+          <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-10" style={{color: blueMuted}}>Company</h4>
             <ul className="space-y-5">
               {[
                 { label: "About Us", path: "/about" },
@@ -82,9 +97,9 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="lg:pl-8">
-            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-10 pt-20" style={{color: blueMuted}}>Contact</h4>
-            <div className="space-y-8">
+          <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-10" style={{color: blueMuted}}>Contact</h4>
+            <div className="space-y-2">
               <div className="flex gap-5 items-start">
                 <MapPin size={20} strokeWidth={1.5} color={blueColor} className="shrink-0 mt-1" />
                 <span className="text-sm font-bold leading-relaxed" style={{color: blueColor}}>
@@ -106,7 +121,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-20 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-black uppercase tracking-[0.3em]" style={{borderTop: `1px solid ${blueBorder}`, color: blueColor}}>
+        <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-2 text-[9px] font-black uppercase tracking-[0.3em]" style={{borderTop: `1px solid ${blueBorder}`, color: blueColor}}>
           <p>© 2026 Multi Group Inc. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
             <Link to="/disclaimer" className="no-underline transition-opacity hover:opacity-60" style={{color: blueColor}}>Disclaimer</Link>
