@@ -2,8 +2,8 @@
 
 :root {
   /* Common Palette */
-  --primary: #2563EB;
-  --primary-dark: #1D4ED8;
+  --primary: #155FA6;
+  --primary-dark: #104b83;
   --accent-green: #10B981;
   --accent-purple: #8B5CF6;
   --accent-orange: #F59E0B;
@@ -18,7 +18,7 @@
   --border-hover: #CBD5E1;
   --text-main: #0F172A;
   --text-muted: #64748B;
-  --text-vivid: #1E40AF; /* Vivid Deep Blue */
+  --text-vivid: #155FA6; /* Match Logo Blue */
   --text-on-dark: #FFFFFF;
   --nav-bg: rgba(255, 255, 255, 0.8);
   --nav-text: #0F172A;
@@ -41,11 +41,11 @@
   --bg-light: #020408;
   --bg-offset: #0A0D14;
   --surface: #0F172A;
-  --border: rgba(37, 99, 235, 0.4); /* Blue border for dark mode */
+  --border: rgba(21, 95, 166, 0.4); /* Logo blue border for dark mode */
   --border-hover: #FFFFFF; /* White hover border */
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
-  --text-vivid: #60A5FA; /* Vivid Bright Blue */
+  --text-vivid: #4A90E2; /* Lighter shade of logo blue for readability on dark */
   --nav-bg: rgba(2, 4, 8, 0.8);
   --nav-text: rgba(255, 255, 255, 0.7);
   --card-bg: rgba(255, 255, 255, 0.02);
