@@ -8,10 +8,10 @@ const Footer = () => {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
 
-  const blueColor = isDark ? '#FFFFFF' : '#2563EB';
-  const blueMuted = isDark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(37, 99, 235, 0.8)';
-  const blueLight = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(37, 99, 235, 0.1)';
-  const blueBorder = isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(37, 99, 235, 0.2)';
+  const blueColor = isDark ? '#FFFFFF' : '#155FA6';
+  const blueMuted = isDark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(21, 95, 166, 0.8)';
+  const blueLight = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(21, 95, 166, 0.1)';
+  const blueBorder = isDark ? 'rgba(255, 255, 255, 0.2)' : 'rgba(21, 95, 166, 0.2)';
 
   const socialIcons = [
     { Icon: Facebook, label: "Facebook", color: isDark ? "#FFFFFF" : "#1877F2", hoverBg: "rgba(24, 119, 242, 0.2)" },
