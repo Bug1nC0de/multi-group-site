@@ -315,7 +315,7 @@ const Contact = () => {
           <div className="relative h-96 border border-border rounded-xl overflow-hidden shadow-lg group">
             <iframe 
               title="HQ" width="100%" height="100%" frameBorder="0" 
-              src="https://maps.google.com/maps?q=50%20Pierneef%20Road,%20Fourways,%20Sandton&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=210b%20Seven%20Oaks%20Ave,%20Chartwell,%20Sandton,%202055&t=&z=15&ie=UTF8&iwloc=&output=embed"
               style={{ filter: theme === 'dark' ? 'invert(90%) hue-rotate(180deg)' : 'none' }}
             ></iframe>
           </div>
