@@ -103,8 +103,8 @@ const Footer = () => {
               <div className="flex gap-5 items-start">
                 <MapPin size={20} strokeWidth={1.5} color={blueColor} className="shrink-0 mt-1" />
                 <span className="text-sm font-bold leading-relaxed" style={{color: blueColor}}>
-                  50 Pierneef Road, Witkoppen Ext., <br />
-                  Fourways, Sandton, South Africa
+                  210b Seven Oaks Ave, Chartwell, <br />
+                  Sandton, 2055
                 </span>
               </div>
               <div className="flex gap-5 items-center">

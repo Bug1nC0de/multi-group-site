@@ -2,18 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Import logos
-import sixUnitedLogo from '../assets/partners/six-united.png';
 import pimaLogo from '../assets/partners/pima.png';
 import enpctLogo from '../assets/partners/enpct-new.png';
-import cfmLogo from '../assets/partners/cfm.png';
 import naffcoLogo from '../assets/partners/naffco.png';
 
 const Partners = () => {
   const partners = [
-    { name: 'CFM', logo: cfmLogo, scale: 0.8, url: 'https://www.cfm.co.mz/en/' },
     { name: 'PIMA Alarm Systems', logo: pimaLogo, scale: 0.9, url: 'https://www.pima-alarms.com/' },
     { name: 'ENPCT', logo: enpctLogo, scale: 0.9, url: 'https://enpct.org.mz/' },
-    { name: 'Six-United Technology Solutions', logo: sixUnitedLogo, scale: 0.85, url: 'https://en.sixunited.com/' },
     { 
       name: 'NAFFCO', 
       logo: naffcoLogo, 
