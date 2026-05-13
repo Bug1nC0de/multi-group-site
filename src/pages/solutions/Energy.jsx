@@ -1,6 +1,7 @@
 import React from 'react';
 import { Zap, Sun, Battery, Activity } from 'lucide-react';
 import SolutionTemplate from '../../components/SolutionTemplate';
+import energyProfile from '../../assets/docs/MultiGroup_Energy_Products.pdf';
 
 const EnergySolutions = () => {
   return (
@@ -9,6 +10,8 @@ const EnergySolutions = () => {
       description="Multi Group Inc provides comprehensive energy infrastructure, from high-voltage electrical engineering to industrial-scale solar integration, ensuring stable and sustainable power for mission-critical operations."
       icon={Zap}
       image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=2000"
+      pdfLink={energyProfile}
+      pdfLabel="View Energy Products Profile"
       features={[
         { 
           title: "High-Voltage Engineering", 
