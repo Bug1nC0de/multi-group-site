@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Lock, Fingerprint, Camera, Navigation } from 'lucide-react';
 import SolutionTemplate from '../../components/SolutionTemplate';
+import securityProfile from '../../assets/docs/MGInc-Security-Profile.pdf';
 
 const SecuritySolutions = () => {
   return (
@@ -9,6 +10,8 @@ const SecuritySolutions = () => {
       description="From high-security physical barriers to advanced biometric surveillance, we engineer defense layers that adapt to critical risk environments across the SADC region."
       icon={Shield}
       image="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=2000"
+      pdfLink={securityProfile}
+      pdfLabel="View Security Profile"
       features={[
         { title: "Physical Access Control", desc: "Mul-T-Lock high-security cylinders, padlocks, and steel doors designed to withstand forced entry and manipulation.", icon: Lock },
         { title: "Biometric & Electronic Systems", desc: "Advanced facial recognition, fingerprint scanning, and smart card technologies for precise identity management.", icon: Fingerprint },

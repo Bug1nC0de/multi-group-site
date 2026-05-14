@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sun, Battery, LayoutPanelLeft, Search } from 'lucide-react';
 import SolutionTemplate from '../../components/SolutionTemplate';
+import energyProfile from '../../assets/docs/MultiGroup_Energy_Products.pdf';
 
 const SolarSolutions = () => {
   return (
@@ -9,6 +10,8 @@ const SolarSolutions = () => {
       description="Empowering businesses with renewable energy solutions that reduce operational costs and carbon footprint through advanced photovoltaic systems."
       icon={Sun}
       image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=2000"
+      pdfLink={energyProfile}
+      pdfLabel="View Energy Products Profile"
       features={[
         { title: "Commercial PV Installations", desc: "Large-scale rooftop and ground-mounted solar arrays tailored for industrial energy loads.", icon: LayoutPanelLeft },
         { title: "Battery Storage Systems", desc: "High-capacity lithium-ion storage for peak shaving and backup power continuity.", icon: Battery },

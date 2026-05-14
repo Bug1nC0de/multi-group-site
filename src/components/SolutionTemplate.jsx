@@ -10,7 +10,9 @@ const SolutionTemplate = ({
   description, 
   features, 
   benefits, 
-  image 
+  image,
+  pdfLink,
+  pdfLabel
 }) => {
   return (
     <div className="bg-bg min-h-screen">
@@ -94,10 +96,22 @@ const SolutionTemplate = ({
 
       {/* CTA Footer Section */}
       <section className="bg-bg" style={{ paddingTop: '1cm', paddingBottom: '1cm' }}>
-         <div className="container text-center">
-             <Link to="/contact" className="btn btn-primary px-8 py-3 text-[11px] border-none shadow-xl">
-                  Request Consultation <ChevronRight size={14} />
-             </Link>
+         <div className="container flex flex-col items-center gap-6">
+             <div className="flex flex-wrap justify-center gap-4">
+               <Link to="/contact" className="btn btn-primary px-8 py-3 text-[11px] border-none shadow-xl">
+                    Request Consultation <ChevronRight size={14} />
+               </Link>
+               {pdfLink && (
+                 <a 
+                   href={pdfLink} 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   className="btn btn-outline px-8 py-3 text-[11px] flex items-center gap-2 no-underline"
+                 >
+                   {pdfLabel || "View Catalog"} <ArrowRight size={14} />
+                 </a>
+               )}
+             </div>
          </div>
       </section>
     </div>
