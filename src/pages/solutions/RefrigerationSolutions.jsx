@@ -2,6 +2,7 @@ import React from 'react';
 import { Snowflake, Box, Wind, Droplets, MonitorDot } from 'lucide-react';
 import SolutionTemplate from '../../components/SolutionTemplate';
 import refrigerationProfile from '../../assets/docs/AC Profile-Multi Group Inc - HVAC and Refrigeration.pdf';
+import refrigerationBanner from '../../assets/banners/refrigeration-banner.jpg';
 
 const RefrigerationSolutions = () => {
   return (
@@ -9,9 +10,11 @@ const RefrigerationSolutions = () => {
       title="Industrial Refrigeration"
       description="Advanced cooling and climate control solutions for food processing, pharmaceuticals, and cold storage logistics."
       icon={Snowflake}
-      image="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&q=80&w=2000"
+      image={refrigerationBanner}
       pdfLink={refrigerationProfile}
       pdfLabel="View HVAC & Refrigeration Profile"
+      hideHeroText={true}
+      bannerMode={true}
       features={[
         { title: "Cold Storage Facilities", desc: "Design and installation of large-scale freezer and chiller rooms with precise temperature control.", icon: Box },
         { title: "Commercial HVAC", desc: "Energy-efficient heating, ventilation, and air conditioning for industrial complexes.", icon: Wind },
