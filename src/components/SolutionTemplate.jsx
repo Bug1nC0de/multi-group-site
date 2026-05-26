@@ -12,7 +12,9 @@ const SolutionTemplate = ({
   benefits, 
   image,
   pdfLink,
-  pdfLabel
+  pdfLabel,
+  hideHeroText = false,
+  bannerMode = false
 }) => {
   return (
     <div className="bg-bg min-h-screen">
@@ -20,6 +22,8 @@ const SolutionTemplate = ({
         title={title}
         description={description}
         image={image}
+        hideText={hideHeroText}
+        bannerMode={bannerMode}
       />
 
       {/* Features Column */}

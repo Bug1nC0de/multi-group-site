@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tractor, Shield, Beaker, Settings, HeartPulse } from 'lucide-react';
 import SolutionTemplate from '../../components/SolutionTemplate';
+import agricultureBanner from '../../assets/banners/agriculture-banner.png';
 
 const AgricultureSolutions = () => {
   return (
@@ -8,7 +9,9 @@ const AgricultureSolutions = () => {
       title="Agricultural Technology"
       description="Innovative solutions for the agricultural sector, ranging from livestock protection to automated feeding systems and nutritional supplements."
       icon={Tractor}
-      image="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=2000"
+      image={agricultureBanner}
+      hideHeroText={true}
+      bannerMode={true}
       features={[
         { title: "Livestock Protection", desc: "Security tagging, tracking, and perimeter fencing solutions to prevent stock theft.", icon: Shield },
         { title: "Nutritional Supplements", desc: "Supply of high-grade feed additives and vitamins for optimal animal health.", icon: Beaker },
