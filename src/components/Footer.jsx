@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin, Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WordmarkLogo from './WordmarkLogo';
 import { motion } from 'framer-motion';
@@ -67,8 +67,10 @@ const Footer = () => {
               ].map((item, i) => (
                 <li key={i}>
                   <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
-                    <div className="w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: blueColor}}></div>
-                    {item.label}
+                    <div className="w-6 flex justify-center items-center shrink-0">
+                      <div className="w-1.5 h-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-all leading-none" style={{backgroundColor: blueColor}}></div>
+                    </div>
+                    <span className="leading-none">{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -89,8 +91,10 @@ const Footer = () => {
               ].map((item, i) => (
                 <li key={i}>
                   <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
-                    <div className="w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: blueColor}}></div>
-                    {item.label}
+                    <div className="w-6 flex justify-center items-center shrink-0">
+                      <div className="w-1.5 h-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-all leading-none" style={{backgroundColor: blueColor}}></div>
+                    </div>
+                    <span className="leading-none">{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -99,31 +103,41 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
-            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-10" style={{color: blueMuted}}>Contact</h4>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-6" style={{color: blueMuted}}>Contact</h4>
             <div className="space-y-2">
-              <div className="flex gap-5 items-start">
-                <MapPin size={20} strokeWidth={1.5} color={blueColor} className="shrink-0 mt-1" />
+              {/* Regional Offices */}
+              <div className="flex items-center gap-4">
+                <div className="w-10 flex justify-center shrink-0">
+                  <Building2 size={22} strokeWidth={1.5} color={blueColor} />
+                </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] font-black uppercase tracking-[0.2em] mb-1" style={{color: blueMuted}}>Regional Offices</span>
-                  <span className="text-sm font-bold leading-relaxed" style={{color: blueColor}}>
-                    Mozambique | South Africa | Swaziland | Namibia | Botswana
-                  </span>
+                  <span className="text-[5px] font-black uppercase tracking-[0.4em] opacity-50 mb-0.5" style={{color: blueMuted}}>Regional Offices</span>
+                  <span className="text-[13px] font-bold leading-tight" style={{color: blueColor}}>Mozambique | South Africa | Swaziland | Namibia | Botswana</span>
                 </div>
               </div>
-              <div className="flex gap-5 items-start">
-                <MapPin size={20} strokeWidth={1.5} color={blueColor} className="shrink-0 mt-1" />
-                <span className="text-sm font-bold leading-relaxed" style={{color: blueColor}}>
-                  210 Seven Oaks Ave, Chartwell, <br />
-                  Sandton, 2055
-                </span>
+
+              {/* Address */}
+              <div className="flex items-center gap-4">
+                <div className="w-10 flex justify-center shrink-0">
+                  <MapPin size={22} strokeWidth={1.5} color={blueColor} />
+                </div>
+                <span className="text-[13px] font-bold leading-tight" style={{color: blueColor}}>210 Seven Oaks Ave, Chartwell, Sandton, 2055</span>
               </div>
-              <div className="flex gap-5 items-center">
-                <Phone size={20} strokeWidth={1.5} color={blueColor} className="shrink-0" />
-                <a href="tel:0861102203" className="text-sm font-bold no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>0861 102 203</a>
+
+              {/* Phone */}
+              <div className="flex items-center gap-4">
+                <div className="w-10 flex justify-center shrink-0">
+                  <Phone size={22} strokeWidth={1.5} color={blueColor} />
+                </div>
+                <a href="tel:0861102203" className="text-[13px] font-bold no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>0861 102 203</a>
               </div>
-              <div className="flex gap-5 items-center">
-                <Mail size={20} strokeWidth={1.5} color={blueColor} className="shrink-0" />
-                <a href="mailto:admin@multigroupinc.com" className="text-sm font-bold no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>admin@multigroupinc.com</a>
+
+              {/* Email */}
+              <div className="flex items-center gap-4">
+                <div className="w-10 flex justify-center shrink-0">
+                  <Mail size={22} strokeWidth={1.5} color={blueColor} />
+                </div>
+                <a href="mailto:admin@multigroupinc.com" className="text-[13px] font-bold no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>admin@multigroupinc.com</a>
               </div>
             </div>
           </div>
