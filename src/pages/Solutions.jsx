@@ -29,31 +29,37 @@ const Solutions = () => {
       <section className="section-padding bg-bg relative overflow-hidden">
         <div className="container relative z-10 text-center">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ marginTop: '1cm' }}>
-            {sectors.map((sector, index) => (
-              <LuxCard key={index} index={index}>
-                <div className="card-content h-full">
-                  <div className={`w-16 h-16 ${sector.color} bg-transparent flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}>
-                    {sector.icon}
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-text-main mb-4 group-hover:text-primary transition-colors tracking-tight text-left">
-                    {sector.title}
-                  </h3>
-                  
-                  <p className="text-text-muted text-sm leading-relaxed mb-8 text-left font-medium">
-                    {sector.desc}
-                  </p>
+            {sectors.map((sector, index) => {
+              const isClickable = ["IT Solutions", "Refrigeration", "Agriculture"].includes(sector.title);
+              
+              return (
+                <LuxCard key={index} index={index} to={isClickable ? sector.path : undefined}>
+                  <div className="card-content h-full">
+                    <div className={`w-16 h-16 ${sector.color} bg-transparent flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}>
+                      {sector.icon}
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-text-main mb-4 group-hover:text-primary transition-colors tracking-tight text-left">
+                      {sector.title}
+                    </h3>
+                    
+                    <p className="text-text-muted text-sm leading-relaxed mb-8 text-left font-medium">
+                      {sector.desc}
+                    </p>
 
-                  <Link 
-                    to={sector.path} 
-                    className="mt-auto flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em] text-primary no-underline group/link"
-                  >
-                    View Capabilities 
-                    <ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
-                  </Link>
-                </div>
-              </LuxCard>
-            ))}
+                    {!isClickable && (
+                      <Link 
+                        to={sector.path} 
+                        className="mt-auto flex items-center gap-3 text-xs font-black uppercase tracking-[0.3em] text-primary no-underline group/link"
+                      >
+                        View Capabilities 
+                        <ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
+                      </Link>
+                    )}
+                  </div>
+                </LuxCard>
+              );
+            })}
           </div>
         </div>
       </section>

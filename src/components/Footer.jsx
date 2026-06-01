@@ -121,7 +121,10 @@ const Footer = () => {
                 <div className="w-10 flex justify-center shrink-0">
                   <MapPin size={22} strokeWidth={1.5} color={blueColor} />
                 </div>
-                <span className="text-[13px] font-bold leading-tight" style={{color: blueColor}}>210 Seven Oaks Ave, Chartwell, Sandton, 2055</span>
+                <div className="flex flex-col">
+                  <span className="text-[5px] font-black uppercase tracking-[0.4em] opacity-50 mb-0.5" style={{color: blueMuted}}>Head Office</span>
+                  <span className="text-[13px] font-bold leading-tight" style={{color: blueColor}}>210 Seven Oaks Ave, Chartwell, Sandton, 2055, South Africa</span>
+                </div>
               </div>
 
               {/* Phone */}
