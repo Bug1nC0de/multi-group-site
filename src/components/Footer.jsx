@@ -83,7 +83,8 @@ const Footer = () => {
                 { label: "About Us", path: "/about" },
                 { label: "Capabilities", path: "/capabilities" },
                 { label: "Innovation", path: "/innovation" },
-                { label: "Our Projects", path: "/our-projects" },
+                { label: "Solutions", path: "/solutions" },
+                { label: "Partnerships", path: "/#global-network" },
                 { label: "Contact", path: "/contact" }
               ].map((item, i) => (
                 <li key={i}>
@@ -106,6 +107,15 @@ const Footer = () => {
                   210 Seven Oaks Ave, Chartwell, <br />
                   Sandton, 2055
                 </span>
+              </div>
+              <div className="flex gap-5 items-start">
+                <MapPin size={20} strokeWidth={1.5} color={blueColor} className="shrink-0 mt-1" />
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] mb-1" style={{color: blueMuted}}>Regional Offices</span>
+                  <span className="text-sm font-bold leading-relaxed" style={{color: blueColor}}>
+                    Mozambique | South Africa | Swaziland | Namibia | Botswana
+                  </span>
+                </div>
               </div>
               <div className="flex gap-5 items-center">
                 <Phone size={20} strokeWidth={1.5} color={blueColor} className="shrink-0" />

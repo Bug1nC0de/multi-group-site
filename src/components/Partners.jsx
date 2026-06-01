@@ -21,7 +21,7 @@ const Partners = () => {
   ];
 
   return (
-    <div className="container relative z-10">
+    <div id="global-network" className="container relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

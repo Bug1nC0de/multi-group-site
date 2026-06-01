@@ -87,7 +87,12 @@ const Contact = () => {
                 <Mail className="contact-method-icon" />
                 <div>
                   <h4 className="contact-method-title">Email</h4>
-                  <p className="contact-method-text">info@multigroupinc.com</p>
+                  <p className="contact-method-text">
+                    info@multigroupinc.com<br />
+                    sales@multigroupinc.com<br />
+                    admin@multigroupinc.com<br />
+                    technical@multigroupinc.com
+                  </p>
                 </div>
               </div>
 
