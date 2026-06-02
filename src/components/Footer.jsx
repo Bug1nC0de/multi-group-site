@@ -66,11 +66,8 @@ const Footer = () => {
                 { label: "Agriculture", path: "/solutions/agriculture" }
               ].map((item, i) => (
                 <li key={i}>
-                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
-                    <div className="w-10 flex justify-center items-center shrink-0">
-                      <div className="w-1.5 h-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: blueColor, marginTop: '4px'}}></div>
-                    </div>
-                    <span className="leading-none">{item.label}</span>
+                  <Link to={item.path} className="text-sm font-bold flex items-center group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
+                    <span className="leading-tight">{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -90,11 +87,8 @@ const Footer = () => {
                 { label: "Contact", path: "/contact" }
               ].map((item, i) => (
                 <li key={i}>
-                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
-                    <div className="w-10 flex justify-center items-center shrink-0">
-                      <div className="w-1.5 h-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-all" style={{backgroundColor: blueColor, marginTop: '4px'}}></div>
-                    </div>
-                    <span className="leading-none">{item.label}</span>
+                  <Link to={item.path} className="text-sm font-bold flex items-center group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
+                    <span className="leading-tight">{item.label}</span>
                   </Link>
                 </li>
               ))}
