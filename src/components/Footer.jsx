@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="lg:pl-8" style={{ paddingTop: '1.2cm' }}>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-5" style={{color: blueMuted}}>Solutions</h4>
-            <ul className="space-y-5">
+            <ul className="flex flex-col" style={{ gap: '3mm' }}>
               {[
                 { label: "Security & Access", path: "/solutions/security" },
                 { label: "IT & Networking", path: "/solutions/it" },
@@ -77,7 +77,7 @@ const Footer = () => {
           {/* Company */}
           <div className="lg:pl-8" style={{ paddingTop: '1.2cm' }}>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-5" style={{color: blueMuted}}>Company</h4>
-            <ul className="space-y-5">
+            <ul className="flex flex-col" style={{ gap: '3mm' }}>
               {[
                 { label: "About Us", path: "/about" },
                 { label: "Capabilities", path: "/capabilities" },
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
+          <div className="lg:pl-8" style={{ paddingTop: '1.2cm' }}>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-6" style={{color: blueMuted}}>Contact</h4>
             <div className="space-y-2">
               {/* Address */}
