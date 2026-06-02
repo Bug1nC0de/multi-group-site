@@ -54,8 +54,8 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
-            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-10" style={{color: blueMuted}}>Solutions</h4>
+          <div className="lg:pl-8" style={{ paddingTop: '1.2cm' }}>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-5" style={{color: blueMuted}}>Solutions</h4>
             <ul className="space-y-5">
               {[
                 { label: "Security & Access", path: "/solutions/security" },
@@ -66,11 +66,8 @@ const Footer = () => {
                 { label: "Agriculture", path: "/solutions/agriculture" }
               ].map((item, i) => (
                 <li key={i}>
-                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
-                    <div className="w-6 flex justify-center items-center shrink-0">
-                      <div className="w-1.5 h-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-all leading-none" style={{backgroundColor: blueColor}}></div>
-                    </div>
-                    <span className="leading-none">{item.label}</span>
+                  <Link to={item.path} className="text-sm font-bold flex items-center group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
+                    <span className="leading-tight">{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -78,8 +75,8 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
-            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-10" style={{color: blueMuted}}>Company</h4>
+          <div className="lg:pl-8" style={{ paddingTop: '1.2cm' }}>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-5" style={{color: blueMuted}}>Company</h4>
             <ul className="space-y-5">
               {[
                 { label: "About Us", path: "/about" },
@@ -90,11 +87,8 @@ const Footer = () => {
                 { label: "Contact", path: "/contact" }
               ].map((item, i) => (
                 <li key={i}>
-                  <Link to={item.path} className="text-sm font-bold flex items-center gap-3 group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
-                    <div className="w-6 flex justify-center items-center shrink-0">
-                      <div className="w-1.5 h-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-all leading-none" style={{backgroundColor: blueColor}}></div>
-                    </div>
-                    <span className="leading-none">{item.label}</span>
+                  <Link to={item.path} className="text-sm font-bold flex items-center group no-underline transition-opacity hover:opacity-70" style={{color: blueColor}}>
+                    <span className="leading-tight">{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -105,17 +99,6 @@ const Footer = () => {
           <div className="lg:pl-8" style={{ paddingTop: '1.4cm' }}>
             <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-6" style={{color: blueMuted}}>Contact</h4>
             <div className="space-y-2">
-              {/* Regional Offices */}
-              <div className="flex items-center gap-4">
-                <div className="w-10 flex justify-center shrink-0">
-                  <Building2 size={22} strokeWidth={1.5} color={blueColor} />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[5px] font-black uppercase tracking-[0.4em] opacity-50 mb-0.5" style={{color: blueMuted}}>Regional Offices</span>
-                  <span className="text-[13px] font-bold leading-tight" style={{color: blueColor}}>Mozambique | South Africa | Swaziland | Namibia | Botswana</span>
-                </div>
-              </div>
-
               {/* Address */}
               <div className="flex items-center gap-4">
                 <div className="w-10 flex justify-center shrink-0">
@@ -124,6 +107,17 @@ const Footer = () => {
                 <div className="flex flex-col">
                   <span className="text-[5px] font-black uppercase tracking-[0.4em] opacity-50 mb-0.5" style={{color: blueMuted}}>Head Office</span>
                   <span className="text-[13px] font-bold leading-tight" style={{color: blueColor}}>210 Seven Oaks Ave, Chartwell, Sandton, 2055, South Africa</span>
+                </div>
+              </div>
+
+              {/* Regional Offices */}
+              <div className="flex items-center gap-4">
+                <div className="w-10 flex justify-center shrink-0">
+                  <Building2 size={22} strokeWidth={1.5} color={blueColor} />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[5px] font-black uppercase tracking-[0.4em] opacity-50 mb-0.5" style={{color: blueMuted}}>Regional Offices</span>
+                  <span className="text-[13px] font-bold leading-tight" style={{color: blueColor}}>Mozambique | South Africa | Swaziland | Namibia | Botswana</span>
                 </div>
               </div>
 
