@@ -56,7 +56,7 @@ const CoreCapabilities = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ marginTop: '0.6cm' }}>
           {capabilities.map((item, i) => (
             <LuxCard
               key={i}
@@ -64,7 +64,7 @@ const CoreCapabilities = () => {
               className="group h-full"
             >
               <div className="card-content p-10 flex flex-col items-center h-full text-center">
-                <div className={`w-16 h-16 ${item.color} bg-bg-offset border border-border flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm group-hover:scale-110 rounded-2xl`}>
+                <div className={`w-16 h-16 ${item.color} flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110`}>
                   {React.cloneElement(item.icon, { strokeWidth: 1.5 })}
                 </div>
                 <h3 className="text-xl font-bold text-text-main mb-6 leading-tight tracking-tight uppercase group-hover:text-primary transition-colors">

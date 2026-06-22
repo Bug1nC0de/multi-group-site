@@ -6,7 +6,6 @@ import Hero from '../components/Hero';
 import WhyChooseUs from '../components/WhyChooseUs';
 import SectorOverview from '../components/SectorOverview';
 import KeyStrengths from '../components/KeyStrengths';
-import SecuritySolutions from '../components/SecuritySolutions';
 import Partners from '../components/Partners';
 
 const Home = () => {
@@ -49,63 +48,88 @@ const Home = () => {
       {/* 3. Strategic Strengths */}
       <KeyStrengths />
 
-      <div className="section-padding pt-0 pb-0">
-        <SecuritySolutions />
-      </div>
-
       <section className="section-padding pt-0 bg-bg-offset border-y border-border">
-        <Partners />
+         <Partners />
       </section>
 
-      {/* Multi-Locking Strategic Link */}
-      <section className="pb-[var(--section-spacing)] bg-bg relative overflow-hidden border-b border-border">
+      {/* Subsidiary Excellence - Multi-Locking Strategic Highlight */}
+      <section className="section-padding bg-bg relative overflow-hidden border-b border-border">
+        {/* Abstract Background Element */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+
         <div className="container relative z-10">
-          <div className="max-w-5xl mx-auto bg-bg-offset border border-border p-12 md:p-20 rounded-sm shadow-xl relative overflow-hidden text-center">
-            {/* Background Decorative Element */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full -translate-y-1/2 blur-3xl pointer-events-none"></div>
-            
-            <div className="flex flex-col items-center gap-12 relative z-10">
-              <div className="space-y-8">
-                <div className="flex flex-col items-center gap-4">
-                  <span className="text-primary font-black text-[10px] uppercase tracking-[0.6em]">Subsidiary Excellence</span>
-                  <h2 className="text-4xl md:text-6xl font-black text-heading-color tracking-tighter uppercase leading-[0.9]">
-                    Advanced <br /><span className="text-primary">Locking Systems</span>
-                  </h2>
-                </div>
-                
-                <p className="text-lg text-text-muted font-medium leading-relaxed max-w-2xl mx-auto">
-                  Visit Multi-Locking for world-class high-security cylinders, padlocks, and electromechanical locking solutions. Africa's leader in physical security infrastructure.
-                </p>
+          <div className="flex flex-col items-center text-center space-y-12">
 
-                <div className="pt-4">
-                  <a 
-                    href="https://www.multi-locking.co.za" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn btn-primary px-12 py-5 group shadow-2xl shadow-primary/20"
-                  >
-                    Explore Multi-Locking <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </div>
+            {/* Header Content */}
+            <motion.div 
+              className="max-w-3xl space-y-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-3">
+                <span className="w-2 h-2 bg-primary animate-pulse"></span>
+                <span className="text-primary font-black text-[10px] uppercase tracking-[0.4em]">Subsidiary Excellence</span>
               </div>
 
-              <div className="relative group w-full max-w-2xl mx-auto">
-                <div className="absolute -inset-4 bg-primary/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="relative aspect-[21/9] bg-bg border border-border flex items-center justify-center p-8 overflow-hidden shadow-inner">
-                   <div className="text-center space-y-4">
-                      <div className="text-4xl md:text-5xl font-black text-primary opacity-30 group-hover:opacity-60 transition-all duration-500 tracking-tighter uppercase italic select-none">
-                        Multi-Locking
-                      </div>
-                      <div className="h-1 w-20 bg-primary mx-auto opacity-40 group-hover:w-32 transition-all duration-500"></div>
-                      <p className="text-[9px] font-black tracking-[0.4em] uppercase text-text-muted group-hover:text-primary transition-colors">Security Without Compromise</p>
-                   </div>
-                </div>
+              <h2 className="text-5xl md:text-7xl font-black text-heading-color tracking-tighter uppercase leading-[0.85]">
+                Advanced <br />
+                <span className="text-primary">Locking Systems</span>
+              </h2>
+
+              <p className="text-lg text-text-muted font-medium leading-relaxed">
+                As a key subsidiary of Multi Group Inc, Multi-Locking provides Africa with world-class high-security cylinders, padlocks, and electromechanical locking solutions.
+              </p>
+            </motion.div>
+
+            {/* Metrics Strip */}
+            <motion.div 
+              className="flex flex-wrap justify-center gap-8 py-8 border-y border-border/50 w-full max-w-4xl"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="flex flex-col items-center gap-1 px-8">
+                <div className="text-3xl font-black text-heading-color">SABS</div>
+                <div className="text-[10px] font-bold text-text-muted uppercase tracking-widest">Certified Standards</div>
               </div>
-            </div>
+              <div className="w-px h-12 bg-border/50 hidden md:block"></div>
+              <div className="flex flex-col items-center gap-1 px-8">
+                <div className="text-3xl font-black text-heading-color">40+</div>
+                <div className="text-[10px] font-bold text-text-muted uppercase tracking-widest">Years Experience</div>
+              </div>
+              <div className="w-px h-12 bg-border/50 hidden md:block"></div>
+              <div className="flex flex-col items-center gap-1 px-8">
+                <div className="text-3xl font-black text-heading-color">24/7</div>
+                <div className="text-[10px] font-bold text-text-muted uppercase tracking-widest">Support Access</div>
+              </div>
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <motion.a
+                href="https://www.multi-locking.co.za"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary px-12 py-5 group shadow-2xl shadow-primary/20"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Explore Multi-Locking 
+                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+            </motion.div>
           </div>
         </div>
-      </section>
-
+      </section>      
+      
       {/* 4. Luxury Testimonial Slider */}
       <section className="section-padding bg-bg-offset relative border-y border-border">
         <div className="container relative z-10">
@@ -147,7 +171,7 @@ const Home = () => {
       </section>
 
       {/* 5. Final Strategic CTA */}
-      <section className="section-padding pt-16 pb-0 bg-bg border-t border-border">
+      <section className="section-padding pt-16 pb-6 bg-bg border-t border-border">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -69,7 +69,7 @@ const LockUpgrades = () => {
               <div className="space-y-8">
                 <LuxCard className="group">
                   <div className="card-content flex-row gap-8 text-left">
-                    <div className="flex-shrink-0 w-14 h-14 bg-primary/10 border border-primary/20 rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <div className="flex-shrink-0 w-14 h-14 rounded-none flex items-center justify-center text-primary group-hover:text-white transition-all duration-500">
                       <RefreshCw size={28} />
                     </div>
                     <div>
@@ -82,7 +82,7 @@ const LockUpgrades = () => {
                 </LuxCard>
                 <LuxCard className="group">
                   <div className="card-content flex-row gap-8 text-left">
-                    <div className="flex-shrink-0 w-14 h-14 bg-primary/10 border border-primary/20 rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <div className="flex-shrink-0 w-14 h-14 rounded-none flex items-center justify-center text-primary group-hover:text-white transition-all duration-500">
                       <Palette size={28} />
                     </div>
                     <div>

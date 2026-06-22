@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Settings, Truck, Microscope, PenTool, Database, Globe, Zap, ArrowRight, Target, Shield, Briefcase } from 'lucide-react';
-import Breadcrumbs from '../components/Breadcrumbs';
+import { ShieldCheck, Settings, Truck, Microscope, PenTool, Database, Globe, Zap, ArrowRight, Target, Shield, Briefcase, ChevronRight } from 'lucide-react';
+import PageHero from '../components/PageHero';
 import LuxCard from '../components/LuxCard';
-import SectionIntroBlock from '../components/SectionIntroBlock';
 
 const Capabilities = () => {
   const coreCapabilities = [
@@ -46,31 +45,20 @@ const Capabilities = () => {
   ];
 
   return (
-    <div className="bg-bg min-h-screen page-wrapper">
-      <div className="container" style={{ paddingTop: '2rem' }}>
-        <Breadcrumbs />
-      </div>
-
-      <SectionIntroBlock
-        badge="Industrial Prowess"
-        badgeIcon={<ShieldCheck size={16} className="text-primary" strokeWidth={1.5} />}
-        title={<>Core <span className="text-primary">Capabilities</span></>}
+    <div className="bg-bg min-h-screen">
+      <PageHero 
+        title={<>Core <br /><span>Capabilities</span></>}
         description="Multi Group Inc delivers unified excellence through a sophisticated blend of engineering, logistics, and strategic manufacturing."
-        stats={[
-          { label: 'Engineering Pillars', value: '06' },
-          { label: 'Regional Hubs', value: '05' },
-          { label: 'Years Active', value: '40+' }
-        ]}
+        image="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000"
       />
 
-      {/* Capabilities Grid */}
       <section className="section-padding bg-bg-offset">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ marginTop: '1cm' }}>
             {coreCapabilities.map((item, index) => (
               <LuxCard key={index} index={index}>
                 <div className="card-content h-full">
-                  <div className="w-16 h-16 bg-bg border border-border flex items-center justify-center mb-8 text-primary shadow-sm group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-text-main mb-4 group-hover:text-primary transition-colors">{item.title}</h3>
@@ -91,14 +79,14 @@ const Capabilities = () => {
         </div>
       </section>
 
-      {/* Regional Impact */}
       <section className="section-padding bg-bg overflow-hidden relative">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="container text-center">
+          <div className="flex flex-col items-center justify-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="max-w-3xl"
             >
               <h2 className="section-title text-4xl mb-8">Regional <span>Infrastructure</span></h2>
               <p className="text-lg text-text-muted font-medium mb-10 leading-relaxed">
@@ -106,34 +94,24 @@ const Capabilities = () => {
                 Swaziland, Namibia, and Botswana, we provide localized expertise with global standards.
               </p>
               
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
                   { label: "SADC Hubs", value: "05" },
                   { label: "Expert Engineers", value: "150+" },
                   { label: "Success Rate", value: "99.9%" },
                   { label: "Years Exp", value: "40+" }
                 ].map((stat, i) => (
-                  <div key={i} className="p-6 bg-bg-offset border border-border">
+                  <div key={i} className="p-6 bg-bg-offset border border-border rounded-3xl">
                     <div className="text-3xl font-black text-primary mb-2">{stat.value}</div>
                     <div className="text-[10px] font-black uppercase tracking-widest text-text-muted">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              {/* Globe section removed */}
-            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Professional Training Programs */}
       <section className="section-padding bg-bg-offset">
         <div className="container">
           <div className="text-center mb-16">
@@ -143,7 +121,7 @@ const Capabilities = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ marginTop: '1cm' }}>
             {[
               { 
                 icon: <Target className="text-white" size={24} />, 
@@ -172,8 +150,8 @@ const Capabilities = () => {
             ].map((item, i) => (
               <LuxCard key={i} index={i}>
                 <div className="card-content">
-                  <div className={`w-12 h-12 ${item.color} flex items-center justify-center mb-6 shadow-lg`}>
-                    {item.icon}
+                  <div className={`w-12 h-12 flex items-center justify-center mb-6`}>
+                    {React.cloneElement(item.icon, { className: "text-primary" })}
                   </div>
                   <h3 className="text-lg font-black text-text-main mb-3 uppercase tracking-tight">{item.title}</h3>
                   <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>
@@ -184,14 +162,13 @@ const Capabilities = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-24 bg-primary relative overflow-hidden" style={{ paddingBottom: '1cm' }}>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)]"></div>
         <div className="container relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-10 tracking-tighter">READY TO UPGRADE YOUR INFRASTRUCTURE?</h2>
           <div className="flex flex-wrap justify-center gap-6">
-             <a href="/contact" className="btn bg-white text-primary px-12 py-5 shadow-2xl shadow-black/10">
-                Request Consultation <ArrowRight size={18} />
+             <a href="/contact" className="btn btn-primary px-8 py-3 text-[11px] border-none shadow-xl">
+                Request Consultation <ChevronRight size={14} />
              </a>
           </div>
         </div>

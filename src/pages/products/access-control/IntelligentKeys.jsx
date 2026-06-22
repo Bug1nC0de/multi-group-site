@@ -64,8 +64,7 @@ const IntelligentKeys = () => {
                 className="group"
               >
                 <div className="card-content">
-                  <div className="w-16 h-16 bg-primary/5 rounded-none flex items-center justify-center text-primary mb-8 transition-all duration-500 group-hover:bg-primary group-hover:text-white group-hover:scale-105 border border-primary/20">
-                    {item.icon}
+                  <div className="w-16 h-16 bg-transparent rounded-none flex items-center justify-center text-primary mb-8 transition-all duration-500 group-hover:bg-primary group-hover:text-white group-hover:scale-105">                    {item.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">{item.title}</h3>
                   <p className="text-gray-400 text-base leading-relaxed font-medium">{item.desc}</p>

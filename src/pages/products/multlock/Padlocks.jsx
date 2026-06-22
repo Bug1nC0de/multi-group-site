@@ -72,7 +72,7 @@ const Padlocks = () => {
                 className="group"
               >
                 <div className="card-content">
-                  <div className="w-20 h-20 bg-primary/10 rounded-none flex items-center justify-center text-primary mb-10 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-2xl shadow-primary/5">
+                  <div className="w-20 h-20 rounded-none flex items-center justify-center text-primary mb-10 group-hover:text-white transition-all duration-500 shadow-2xl shadow-primary/5">
                     <Lock size={40} />
                   </div>
                   <h2 className="text-3xl font-bold mb-6 text-white tracking-tight group-hover:text-primary transition-colors">{series.title}</h2>

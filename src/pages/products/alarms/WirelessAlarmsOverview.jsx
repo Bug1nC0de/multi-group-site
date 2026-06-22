@@ -35,8 +35,7 @@ const WirelessAlarmsOverview = () => {
                 className="group"
               >
                 <div className="card-content">
-                  <div className="w-16 h-16 bg-primary/10 rounded-none flex items-center justify-center text-primary mb-8 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    {item.icon}
+                  <div className="w-16 h-16 rounded-none flex items-center justify-center text-primary mb-8 group-hover:text-white transition-all duration-500 bg-transparent">                    {item.icon}
                   </div>
                   <h3 className="text-2xl font-bold mb-5 text-white tracking-tight">{item.title}</h3>
                   <p className="text-gray-400 text-base leading-relaxed font-medium">{item.desc}</p>

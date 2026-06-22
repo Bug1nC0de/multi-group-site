@@ -58,8 +58,7 @@ const KingpinLocks = () => {
                 index={i}
               >
                 <div className="card-content">
-                  <div className="text-accent mb-8 bg-accent/5 w-16 h-16 flex items-center justify-center border border-accent/20 group-hover:bg-accent group-hover:text-white transition-all duration-500">{item.icon}</div>
-                  <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-white">{item.title}</h3>
+                  <div className="text-accent mb-8 bg-transparent w-16 h-16 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-500">{item.icon}</div>                  <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-white">{item.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed font-medium">{item.desc}</p>
                 </div>
               </LuxCard>

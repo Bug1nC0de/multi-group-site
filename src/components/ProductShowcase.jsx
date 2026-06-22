@@ -45,7 +45,7 @@ const ProductShowcase = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 perspective-1000">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 perspective-1000" style={{ marginTop: '1cm' }}>
           {products.map((product, index) => (
             <LuxCard key={product.id} index={index} className="group relative">
                 <div className="w-full flex justify-between items-start mb-8">

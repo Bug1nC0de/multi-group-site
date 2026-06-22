@@ -23,7 +23,7 @@ const Careers = () => {
 
       <section className="section-padding dark-section relative">
         <div className="container relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20" style={{ marginTop: '1cm' }}>
             {[
               { icon: <Briefcase size={40} />, title: "Technical Engineering", desc: "Expert manufacturing and installation of high-security steel doors and locking systems." },
               { icon: <Users size={40} />, title: "Consulting", desc: "Design bespoke risk portfolios and security strategies for elite corporate and residential clients." },
@@ -31,7 +31,7 @@ const Careers = () => {
             ].map((item, i) => (
               <LuxCard key={i} index={i} className="group">
                 <div className="card-content">
-                  <div className="w-20 h-20 bg-primary/10 rounded-none flex items-center justify-center text-primary mb-10 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                  <div className="w-20 h-20 bg-primary/10 rounded-none flex items-center justify-center text-primary mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500">
                     {item.icon}
                   </div>
                   <h3 className="text-3xl font-bold mb-6 text-white tracking-tight">{item.title}</h3>

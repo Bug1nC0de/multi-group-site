@@ -95,7 +95,7 @@ const ProductPageTemplate = ({
                    <div className="relative">
                       <div className="absolute -inset-10 bg-primary/5 blur-3xl rounded-none opacity-50"></div>
                       <LuxCard 
-                        className="p-2 bg-bg-offset border border-border rounded-none overflow-hidden aspect-video shadow-2xl"
+                        className="p-2 bg-transparent border border-border rounded-none overflow-hidden aspect-video"
                       >
                          <img src={section.image} alt={section.title} className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-1000" />
                       </LuxCard>
@@ -166,7 +166,7 @@ const ProductPageTemplate = ({
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg"></div>
                 <div className="absolute bottom-12 left-12 flex items-center gap-6">
-                  <div className="w-16 h-16 border border-primary/30 flex items-center justify-center text-primary bg-bg/40 backdrop-blur-md">
+                  <div className="w-16 h-16 flex items-center justify-center text-primary bg-bg/40 backdrop-blur-md">
                     {section.icon}
                   </div>
                   <div className="text-left">
