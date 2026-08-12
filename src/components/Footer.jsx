@@ -142,7 +142,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-2 text-[9px] font-black uppercase tracking-[0.3em]" style={{borderTop: `1px solid ${blueBorder}`, color: blueColor}}>
+        <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-2 text-[9px] font-black uppercase tracking-[0.3em]" style={{borderTop: `1px solid ${blueBorder}`, color: blueColor, marginBottom: '1.5rem'}}>
           <p>© 2026 Multi Group Inc. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
             <Link to="/disclaimer" className="no-underline transition-opacity hover:opacity-60" style={{color: blueColor}}>Disclaimer</Link>
@@ -150,6 +150,19 @@ const Footer = () => {
             <Link to="/terms" className="no-underline transition-opacity hover:opacity-60" style={{color: blueColor}}>Terms</Link>
             <span className="hidden sm:inline pl-10" style={{color: blueColor, borderLeft: `1px solid ${blueBorder}`}}>Level 4 BEE Contributor</span>
           </div>
+        </div>
+
+        {/* Credit */}
+        <div className="pt-8 flex justify-center text-[9px] font-black uppercase tracking-[0.3em]">
+          <a
+            href="https://www.callitservices.co.za"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline transition-opacity hover:opacity-60"
+            style={{color: blueMuted}}
+          >
+            Site by Call iT Services
+          </a>
         </div>
       </div>
     </footer>
